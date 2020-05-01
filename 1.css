@@ -10,18 +10,34 @@ body{
 .header{
     border: 4px double #8A2BE2; 
     word-wrap: break-word;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     /* background: #dcdde1; */
     position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.header h3.slogan{
+.header .header-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 20px;
+}
+.header .active-s{
+    display: block;
+    animation: chuyenTab 1s ease;
+    animation-duration: infinite;
+}
+.header .header-item h3.slogan{
     font-size: 1.6em;
     text-transform: uppercase;
     font-weight: 600;
+    padding: 0 100px;
     color: #ffffff;
     text-align: center;
-    padding: 0 100px;
     word-wrap: break-word;
     letter-spacing: 2px;
     line-break: auto;
@@ -31,14 +47,22 @@ body{
     animation: go 3s linear infinite;
     /* line-height: 2px; */
 }
-.header h5{
+@media (max-width:992px){
+     h3.slogan-md{
+        font-size: 1.3em;
+        font-weight: 400;
+        padding: 0 50px;
+    }
+
+}
+.header .header-item h5{
     position:absolute;
     bottom:0;
     right: 50px;
     color: #0097e6;
     font-size: 14px;
 }
-.header h5::before{
+.header  .header-item h5::before{
     content: '';
     position:absolute;
     top: 50%;
@@ -48,7 +72,7 @@ body{
     height: 2px;
     background: #0097e6;
 }
-.header h5::after{
+.header .header-item h5::after{
     content: '';
     position:absolute;
     top: 50%;
@@ -105,6 +129,11 @@ body{
     font-size: 2em;
     color: #3d3d3d;
 }
+.main .left .left__img-box span.active-idol{
+    color: pink;
+    font-weight: 600;
+}
+
 .main .left .left__img-box img{
     width: 150px;
     height: 150px;
@@ -242,7 +271,7 @@ h4.title{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items: center;
     box-sizing: border-box;
     background: #bdc3c7;
@@ -287,19 +316,22 @@ h4.title{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
     box-shadow: 0 0 5px #7efff5;
     animation: load 3s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
     /* animation-duration: inherit; */
 }
 @keyframes load{
-    from{
-        transform:scale(0.5);
+    0%{
+        transform:scale(0.2);
+        top: 50%;
     }
-    to{
+    50%,100%{
         transform:scale(1);
+        top: 0;
     }
 }
 
@@ -418,6 +450,7 @@ h4.title{
     margin-bottom: 15px;
     border: none;
     box-shadow: 0 0 7px rgba(0,0,0,.5);
+    margin: 5px;
 }
 .right__content .card:hover{
     box-shadow: 0 0 2px #7d5fff;

@@ -1,21 +1,37 @@
-const heart = document.querySelectorAll(".heart");
+// const heart = document.querySelectorAll(".heart");
+const iconFB = document.querySelectorAll(".icon-fb");
+const idol = document.querySelectorAll(".idol");
 const avatar = document.querySelector("#avatar");
+const logoIdol = document.querySelector("#logo-idol");
 
-// avatar.setAttribute("src","2.jpg");
-// console.log(heart);  
 const feelings = ["like.png","love.png","haha.png","wow.png","sad.png","angry.png"];
+const idols = ["1.gif","2.gif","3.gif","4.gif"];
 const obj = {};
-heart.forEach((element,i) => {
-    let type = element.getAttribute("data-type")
-    obj[type] = feelings[i];
-
+const obj1 = {};
+iconFB.forEach((element,i) => {
+    // let type = element.getAttribute("data-type");
+    // obj[type] = feelings[i];
     element.addEventListener("click",()=>{
-        avatar.setAttribute("src" , `feeling/${obj[type]}`);
+        let srcImg = element.getAttribute("src");
+        console.log(srcImg)
+        avatar.setAttribute("src" , `${srcImg}`);
     });
 });
 
-console.log(obj);
 
+
+// Idol Trộn
+
+idol.forEach((element,i) => {
+    let dataId = element.getAttribute("data-id")
+    obj1[dataId] = idols[i];
+    element.addEventListener("click",()=>{
+        element.classList.toggle("active-idol");
+        logoIdol.setAttribute("src" , `Image/${obj1[dataId]}`);
+    });
+});
+
+console.log(obj,obj1);
 // function margeArr(arr1,arr2){
 //     let obj = {};
 //     let arr_new =[];
@@ -46,3 +62,23 @@ function showContent(id){
     content.classList.add("active-tab");
     // console.log(show)
 }
+
+
+// Set Slider Cho Header
+let curentIndex = 0;
+function currentShow(){
+    const slide = document.querySelectorAll(".header-item");
+    for(let i = 0; i < slide.length; i++) {
+        const element = slide[i];
+        // element.style.display = "none";
+        element.classList.remove("active-s");
+    }
+    slide[curentIndex].classList.add("active-s");
+    curentIndex++;
+    if(curentIndex>slide.length - 1)
+    {
+        curentIndex=0;
+    }
+    setTimeout(currentShow, 7000);
+}
+currentShow(curentIndex=0);
