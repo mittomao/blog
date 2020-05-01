@@ -414,7 +414,7 @@ body
         transform:translateX(100px);
     }
     100%{
-        transform:translateX(-100px);
+        transform:translateX(-300px);
 
     }
 }

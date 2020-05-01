@@ -132,14 +132,14 @@ $(function()
         else
 		    insTime.text(ctMinutes+':'+ctSeconds);
             
-		insTime.css({'left':seekT,'margin-left':'-21px'}).fadeIn(0);
+		// insTime.css({'left':seekT,'margin-left':'-21px'}).fadeIn(0);
 		
 	}
 
     function hideHover()
 	{
         sHover.width(0);
-        insTime.text('00:00').css({'left':'0px','margin-left':'0px'}).fadeOut(0);		
+        // insTime.text('00:00').css({'left':'0px','margin-left':'0px'}).fadeOut(0);		
     }
     // Tua Loi Bai Hat
     function playFromClickedPos()

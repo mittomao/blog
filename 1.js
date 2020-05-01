@@ -6,7 +6,7 @@ const logoIdol = document.querySelector("#logo-idol");
 const backLeft = document.querySelector("#back-left");
 
 const feelings = ["like.png","love.png","care.png","haha.png","wow.png","sad.png","angry.png"];
-const idols = ["1.gif","2.gif","3.gif","4.gif"];
+const idols = ["6.gif","2.gif","3.gif","4.gif"];
 const obj = {};
 const obj1 = {};
 heart.forEach((element,i) => {
@@ -38,6 +38,7 @@ backLeft.onclick = function () {
 }
 
 
+// Card
 
 // function margeArr(arr1,arr2){
 //     let obj = {};
