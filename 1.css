@@ -93,6 +93,23 @@ body{
     }
 }
 
+.header #back-left{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.header .active-xoay{
+    transform:rotate(180deg);
+}
+
+.header #back-left i.fa{
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #7d5fff;
+}
+
 
 /* Main */
 .main{
@@ -106,8 +123,12 @@ body{
     border: 1px solid #8A2BE2; 
     border-top: none;
     box-sizing: border-box;
-
 }
+.main .hideNav{
+    display: none;
+    transition-delay: .3s;
+}
+
 .main .left .left__img-box{
     width: 100%;
     height: 200px;
@@ -138,9 +159,7 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
     position: absolute;
     box-shadow: 0 0 5px #7efff5;
 }
@@ -405,7 +424,20 @@ h4.title{
 }
 .right__content{
     /* margin-top: 30px; */
+    position: relative;
 }
+/* Form */
+.form-top{
+    position: absolute;
+    top: 10px;
+    right:20px;
+    width:25%;
+}
+.form-top input[type="text"]{
+    border-radius: 10px;
+    color: #7d5fff;
+}
+
 
 /* Phan Top Post */
  .top-post{

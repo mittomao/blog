@@ -54,8 +54,15 @@ $(function()
 		artist: "Track 5",
 		name: "Từ Khi Gặp Em",
 		url: "Music/Tu_Khi_Gap_Em.mp3",
-		picture: "5.jpg"
+		picture: "4.jpg"
     },
+    {
+        stt : 5,
+		artist: "Track 6",
+		name: "Yêu",
+		url: "Music/Yeu.mp3",
+		picture: "3.jpg"
+    }
 ];
 
 	// Xáo Trộn Bài Hát

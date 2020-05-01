@@ -1,20 +1,21 @@
-// const heart = document.querySelectorAll(".heart");
-const iconFB = document.querySelectorAll(".icon-fb");
+const heart = document.querySelectorAll(".heart");
+// const iconFB = document.querySelectorAll(".icon-fb");
 const idol = document.querySelectorAll(".idol");
 const avatar = document.querySelector("#avatar");
 const logoIdol = document.querySelector("#logo-idol");
+const backLeft = document.querySelector("#back-left");
 
-const feelings = ["like.png","love.png","haha.png","wow.png","sad.png","angry.png"];
+const feelings = ["like.png","love.png","care.png","haha.png","wow.png","sad.png","angry.png"];
 const idols = ["1.gif","2.gif","3.gif","4.gif"];
 const obj = {};
 const obj1 = {};
-iconFB.forEach((element,i) => {
-    // let type = element.getAttribute("data-type");
-    // obj[type] = feelings[i];
+heart.forEach((element,i) => {
+    let type = element.getAttribute("data-type");
+    obj[type] = feelings[i];
     element.addEventListener("click",()=>{
-        let srcImg = element.getAttribute("src");
-        console.log(srcImg)
-        avatar.setAttribute("src" , `${srcImg}`);
+        // let srcImg = element.getAttribute("src");
+        // console.log(srcImg)
+        avatar.setAttribute("src" , `feeling/${obj[type]}`);
     });
 });
 
@@ -31,7 +32,13 @@ idol.forEach((element,i) => {
     });
 });
 
-console.log(obj,obj1);
+backLeft.onclick = function () {
+    backLeft.firstChild.classList.toggle("active-xoay");
+    document.querySelector(".is-show").classList.toggle("hideNav");
+}
+
+
+
 // function margeArr(arr1,arr2){
 //     let obj = {};
 //     let arr_new =[];
