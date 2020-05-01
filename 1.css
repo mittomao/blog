@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    transition: all .4s ease;
+}
+body{
+    box-sizing: border-box;
+}
+.header{
+    border: 4px double #8A2BE2; 
+    word-wrap: break-word;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background: #dcdde1; */
+    position: relative;
+}
+.header h3.slogan{
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 100px;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+    line-break: auto;
+    background: url(1.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: go 3s linear infinite;
+    /* line-height: 2px; */
+}
+.header h5{
+    position:absolute;
+    bottom:0;
+    right: 50px;
+    color: #0097e6;
+    font-size: 14px;
+}
+.header h5::before{
+    content: '';
+    position:absolute;
+    top: 50%;
+    transform:translate(-50%);
+    left: -20px;
+    width:30px;
+    height: 2px;
+    background: #0097e6;
+}
+.header h5::after{
+    content: '';
+    position:absolute;
+    top: 50%;
+    transform:translate(-50%);
+    right:-50px;
+    width:30px;
+    height: 2px;
+    background: #0097e6;
+}
+
+
+@keyframes go{
+    0%{
+        background-position: -1000px;
+    }
+    0%{
+        background-position: 0;
+    }
+}
+
+
+/* Main */
+.main{
+    width: 100%;
+    height: auto;
+}
+.main .left{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #8A2BE2; 
+    border-top: none;
+    box-sizing: border-box;
+
+}
+.main .left .left__img-box{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.main .left .left__img-box span{
+    width:50%;
+    height: 50%;
+    border: 1px solid gray;
+    border-top: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #3d3d3d;
+}
+.main .left .left__img-box img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 0 5px #7efff5;
+}
+
+.left__introduce{
+    text-align: center;
+    padding-bottom: 20px;
+}
+h4.title{
+    font-size:18px;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: #7d5fff;
+    margin-bottom: 20px;
+}
+
+.left__introduce div{
+    display: flex;
+    justify-content: flex-start;
+    padding-left : 20px;
+    padding-bottom: 5px;
+}
+.left__introduce div i.fa{
+    font-size: 20px;
+    color: #ff3838;
+    margin-right: 10px;
+}
+.left__introduce div i.fa:hover{
+    color: #7d5fff;
+}
+
+.left__introduce div h5{
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Css Thong Ke So Luong*/
+.left__statistical{
+    padding-bottom: 30px;
+}
+.box{
+    display: flex;
+    justify-content:center;
+    position: relative;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2px;
+    height: 100%;
+    background: #7d5fff;
+}
+.box-item{
+    width: 50%;
+    text-align: center;
+}
+.box-item h3{
+    color: #7d5fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* css ABout */
+
+.left__about{
+    position: relative;
+    height: 300px;
+}
+.icon{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background: #7d5fff;
+}
+.icon > div{
+    position: relative;
+    cursor: pointer;
+    
+}
+.icon > div p{
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #7d5fff;
+    text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 66% 83%, 54% 100%, 37% 83%, 0 83%);
+    background: #fff;
+    box-shadow: 0 0 5px #7efff5;
+    padding: 5px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+    color: #7d5fff;
+}
+
+.icon > div:hover p{
+    top: -30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.icon > div i.fa{
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.icon i.fa:hover{
+    background: #32ff7e;
+    border-radius: 5px;
+}
+.icon-feeling{
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background: #bdc3c7;
+    padding:10px 0;
+    border-radius: 10px;
+}
+.heart{
+    padding: 0 5px;
+    position: relative;
+    /* animation: gogo 2s linear infinite; */
+    cursor: pointer;
+
+}
+.heart:hover{
+    transform:scale(1.4);
+}
+
+.heart::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: red;
+    top: -100px;
+    left: 0;
+}
+
+.heart img{
+    width: 30px;
+    background-position: center; 
+}
+
+.avatar{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px #7efff5;
+    animation: load 3s linear infinite;
+    /* animation-duration: inherit; */
+}
+@keyframes load{
+    from{
+        transform:scale(0.5);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+@keyframes gogo{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-5px);
+    }
+    100%{
+        transform:translateY(5px);
+    }
+}
+
+/* Phan Right Hien Thi Cac Tin */
+
+.right {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.right .right__tab{
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+
+.right .right__tab a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    /* color: red; */
+    padding: 16px 0;
+    width: 33.33%;
+    text-align: center;
+}
+.right .right__tab a:focus{
+    background: #7d5fff;
+    box-shadow: 0 0 3px #7d5fff;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.right .right__tab a:not(:last-child){
+    border-right: 1px solid #7d5fff;
+}
+.right .right__tab a:hover{
+    background: #7d5fff;
+    box-shadow: 0 0 3px #7d5fff;
+    color: #ffffff;
+}
+.content{
+    display: none;
+    overflow: hidden;
+}
+.active-tab{
+    display: block;
+    animation: chuyenTab 1s ease;
+    animation-duration: infinite;
+}
+@keyframes chuyenTab{
+    from{
+        transform-origin: right;
+        transform:translateX(500px);
+    }
+    to{
+        transform-origin: left;  
+        transform:translateX(0);
+    }
+}
+.right__content{
+    /* margin-top: 30px; */
+}
+
+/* Phan Top Post */
+ .top-post{
+    color: #7d5fff;
+    font-size: 2.5em;
+    margin: 30px 0;
+    padding-left: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+ .top-post::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7d5fff;
+}
+ .top-post::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(to right , #7d5fff , #fff )
+}
+/* End Top Post */
+
+
+
+.right__content .card{
+    /* max-height: 100px; */
+
+    /* overflow: auto; */
+    box-sizing: border-box;
+    word-wrap: break-word;
+    position: relative;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 0 0 7px rgba(0,0,0,.5);
+}
+.right__content .card:hover{
+    box-shadow: 0 0 2px #7d5fff;
+}
+
+.right__content .card .card-title{
+    text-decoration: none;
+    color: #7d5fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.right__content .card .card-title:hover{
+    color: blue;
+}
+
+.right__content .card .card-subject{
+    font-size: 12px;
+    padding-left: 10px;
+    font-style: italic;
+
+}
+.right__content .card .card-link{
+    word-wrap: break-word;
+    font-size: 14px;
+    padding-left: 10px;
+
+}
+
+.right__content .card .card-date{
+    position: absolute;
+    bottom:-15px;
+    right:10px;
+    font-size: 14px;
+}
+
+
+/* Phan EnterTament */
+
+.right__entertaiment{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-top: 3px solid #8A2BE2; 
+}
+.footer h3{
+    text-transform: uppercase;
+    color: #8A2BE2;
+}
+.footer h5{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Thay Doi Mau Nen WEB */
+
+.change-bg{
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
