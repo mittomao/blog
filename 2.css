@@ -21,7 +21,8 @@ body
 }
 @media (max-width:992px){
     #app-cover{
-        left: 5vh;
+        left: 0;
+        top:calc(100%-30px);
     }
     .album{
         top: 10px;
