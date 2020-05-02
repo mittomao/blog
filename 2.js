@@ -24,44 +24,37 @@ $(function()
 	var songs = [{
         stt : 0,
 		artist: "Track 1",
-		name: "Nếu Anh Đi (Cover)",
-		url: "Music/NeuAnhDi.mp3",
+		name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
+		url: "Music/Tu_Khi_Gap_Em.mp3",
 		picture: "3.jpg"
     },
     {
         stt : 1,
 		artist: "Track 2",
-		name: "Người Quan Trọng Nhất ",
-		url: "Music/Nguoi_Quan_Trong_Nhat.mp3",
+		name: "Thương Em Là Điều Anh Không Ngờ Tới",
+		url: "Music/ThuongEmLaDieuAnhKhongTheNgo.mp3",
 		picture: "4.jpg"
     },
     {
         stt : 2,
 		artist: "Track 3",
-		name: "Thương Em Là Điều Anh Không Thể Ngờ Tới ",
-		url: "Music/Thuong_Em_La_Dieu_Anh_Khong_The_Ngo_TOi.mp3",
+		name: "OST Có Tôi Ở Đây Rùi ! ",
+		url: "Music/Co_Toi_O_Day_Roi.mp3",
 		picture: "6.jpg"
     },
     {
         stt : 3,
 		artist: "Track 4",
-		name: "Vì Yêu Mà Đến",
-		url: "Music/Vi_Yeu_Ma_Den.mp3",
+		name: "Yêu Từ Xa  -  Hồ Việ Trung",
+		url: "Music/Yeu_Tu_Xa.mp3",
 		picture: "5.jpg"
     },
     {
         stt : 4,
 		artist: "Track 5",
-		name: "Từ Khi Gặp Em",
-		url: "Music/Tu_Khi_Gap_Em.mp3",
+		name: "Ác Ma Đến Từ Thiên Đường",
+		url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
 		picture: "4.jpg"
-    },
-    {
-        stt : 5,
-		artist: "Track 6",
-		name: "Yêu",
-		url: "Music/Yeu.mp3",
-		picture: "3.jpg"
     }
 ];
 

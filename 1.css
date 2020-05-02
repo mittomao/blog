@@ -559,6 +559,22 @@ h4.title{
    
 }
 
+/* Phan Trang */
+.right_pagination{
+    text-align: right;
+    display: flex;
+    justify-content:flex-end;
+    list-style: none;
+    margin-top: 10px;
+}
+.right_pagination li{
+    padding: 10px;
+    border: 1px solid gray;
+    margin-left: 10px;
+}
+
+
+
 
 
 
