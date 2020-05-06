@@ -56,7 +56,8 @@ const tab = document.querySelectorAll(".tab-item");
 const contents = document.querySelectorAll(".content");
 
 tab.forEach(element=>{
-    element.addEventListener("click",()=>{
+    element.addEventListener("click",(e)=>{
+        e.preventDefault();
         const dataId = element.getAttribute("data-id");
         showContent(dataId);
     });
@@ -87,7 +88,7 @@ function currentShow(){
     {
         curentIndex=0;
     }
-    setTimeout(currentShow, 7000);
+    setTimeout(currentShow, 10000);
 }
 currentShow(curentIndex=0);
 
@@ -156,3 +157,14 @@ window.onload = function(){
     // let listPagi = document.querySelector(".right_pagination");
     // listPagi.innerHTML = phantrang(items,3);
 }
+
+
+// Tao Hieu Ung Con Tro Chuot
+
+const currorMain = document.querySelector("#curror");
+function createCurror(e){
+    currorMain.style.top = e.pageY + 'px';
+    currorMain.style.left = e.pageX + 'px';
+    currorMain.style.transition = 0.1 + "s" + "ease";
+}
+window.addEventListener("mousemove" , createCurror);

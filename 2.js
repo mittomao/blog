@@ -54,7 +54,7 @@ $(function()
 		artist: "Track 5",
 		name: "Ác Ma Đến Từ Thiên Đường",
 		url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
-		picture: "4.jpg"
+		picture: "2.jpg"
     }
 ];
 

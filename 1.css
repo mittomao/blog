@@ -6,6 +6,20 @@
 }
 body{
     box-sizing: border-box;
+    /* cursor: none; */
+}
+#curror{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background: url(./icon/3-removebg-preview.png) center no-repeat;
+    background-size: cover;
+    transition:0;
+    pointer-events: none;
+    z-index:10000;
+    text-align: center;
 }
 .header{
     border: 4px double #8A2BE2; 
@@ -26,40 +40,68 @@ body{
     display: none;
     padding-top: 20px;
 }
+.header .header-item:nth-child(1){
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.header .header-item:nth-child(2){
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+.header .header-item:nth-child(3){
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.header .header-item:nth-child(4){
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+
+
 .header .active-s{
     display: block;
-    animation: chuyenTab 1s ease;
+    animation: chuyenTab 2s linear;
     animation-duration: infinite;
 }
 .header .header-item h3.slogan{
     font-size: 1.6em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 900;
     padding: 0 100px;
     color: #ffffff;
     text-align: center;
     word-wrap: break-word;
     letter-spacing: 2px;
     line-break: auto;
-    background: url(1.jpg);
+    background: url(./Image/2.jpg);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: go 3s linear infinite;
     /* line-height: 2px; */
 }
+
+.header .header-item .loading{
+    text-align: center;
+    font-size: 6em;
+    color: #fff;
+    letter-spacing: 4px;
+    line-break: auto;
+    background: url(./Image/3.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-position: 50%;
+    animation: go 3s linear infinite;
+}
 @media (max-width:992px){
      h3.slogan-md{
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 400;
         padding: 0 50px;
     }
-
 }
 .header .header-item h5{
     position:absolute;
     bottom:0;
     right: 50px;
-    color: #0097e6;
+    color: #fff;
+    text-shadow: 0 0 10px #ffffff;
     font-size: 14px;
 }
 .header  .header-item h5::before{
@@ -86,10 +128,13 @@ body{
 
 @keyframes go{
     0%{
-        background-position: -1000px;
+        background-position-y: 300px;
+        /* background-position-x: 100px; */
     }
-    0%{
-        background-position: 0;
+    
+    50%,100%{
+        background-position-y: 100px;
+        /* background-position-x: 30px; */
     }
 }
 
@@ -168,6 +213,7 @@ body{
     text-align: center;
     padding-bottom: 20px;
 }
+
 h4.title{
     font-size:18px;
     text-align: center;
@@ -413,13 +459,26 @@ h4.title{
     animation-duration: infinite;
 }
 @keyframes chuyenTab{
-    from{
-        transform-origin: right;
-        transform:translateX(500px);
+    0%{
+        /* transform-origin: right;
+        transform:translateX(1000px); */
+        transform: scaleY(0);
+        transform: scaleX(0);
+
+        /* height: 0; */
     }
-    to{
-        transform-origin: left;  
-        transform:translateX(0);
+    50%{
+        transform: scaleY(1);
+        transform: scaleX(1);
+
+        /* height: 100%; */
+        /* transform-origin: left;  
+        transform:translateX(0); */
+    }
+    90%,100%{
+        transform: scaleX(0.5);
+        /* transform: scaleY(1); */
+
     }
 }
 .right__content{
