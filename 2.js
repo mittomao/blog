@@ -11,6 +11,60 @@ const volumButton = document.querySelector("#volum");
 const titleMusic = document.querySelector(".title-music");
 const controls = document.querySelector(".controls");
 var duration = 0;
+// List Song
+var songs = [{
+    stt : 0,
+    artist: "Track 1",
+    name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
+    url: "Music/Tu_Khi_Gap_Em.mp3",
+    
+},
+{
+    stt : 1,
+    artist: "Track 2",
+    name: "Thương Em Là Điều Anh Không Ngờ Tới",
+    url: "Music/ThuongEmLaDieuAnhKhongTheNgo.mp3",
+    
+},
+{
+    stt : 2,
+    artist: "Track 3",
+    name: "Tất Cả Sẽ Thay Anh ! ",
+    url: "Music/Tat_Ca_Se_Thay_Em.mp3",
+    
+},
+{
+    stt : 3,
+    artist: "Track 4",
+    name: "Yêu Từ Xa  -  Hồ Việt Trung",
+    url: "Music/Yeu_Tu_Xa.mp3",
+    
+},
+{
+    stt : 4,
+    artist: "Track 5",
+    name: "Ác Ma Đến Từ Thiên Đường",
+    url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
+    
+},
+{
+    stt : 5,
+    artist: "Track 6",
+    name: "Em Không Sai , Chúng Ta Sai",
+    url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
+    lyrics : [
+        {text : "..." ,start : 0, end: 66},
+        {text : "Anh Thực Sự Ngu Ngôc" ,start : 67, end: 70},
+        {text : "Bảo Vệ Người Ấy Cũng Không Xong" ,start : 70.5, end: 72.5},
+        {text : "Lỡ Làm Người Yêu Khóc" ,start : 73, end: 75},
+        {text : "Thế Còn Xứng Đáng Yêu Không" ,start : 76, end: 78},
+    ]
+}
+];
+
+var currIndex = -1;
+var lineIndex = 0;
+var curentLyric, audInterval;
 
 // Lap Bai Hat 
 player.loop = true;
@@ -50,13 +104,44 @@ player.onloadedmetadata = function(){
 }
 
 player.addEventListener("timeupdate",function(){
-    let currentTime = this.currentTime;
-    const min = Math.floor(currentTime/60);
-    const sec = Math.floor(currentTime%60);
-    curTime.innerHTML = `${min<10?'0'+min:min}:${sec<10?'0'+sec:sec}`;
-    let widthTime = (currentTime/duration)*100;
-    progress.style.width = widthTime + "%";
+        let currentTime = this.currentTime;
+        const min = Math.floor(currentTime/60);
+        const sec = Math.floor(currentTime%60);
+        curTime.innerHTML = `${min<10?'0'+min:min}:${sec<10?'0'+sec:sec}`;
+        let widthTime = (currentTime/duration)*100;
+        progress.style.width = widthTime + "%";
+    // Tao Loi Bai Hat
+
+    curentLyric = songs[currIndex].lyrics;
+    if (!curentLyric) {
+        return;
+    }
+
+    var startTime = curentLyric[lineIndex].start;
+    var endTime = curentLyric[lineIndex].end;
+
+    if(player.currentTime > endTime)
+    {
+        lineIndex=lineIndex+1;
+        lyrics.innerHTML = "";
+        nextLine(lineIndex);
+    }
+    
 });
+
+const lyrics = document.querySelector(".lyrics");
+var nextLine = function (index) {
+    if (!songs[currIndex].lyrics[lineIndex]) {
+      return;
+    }
+    var lyric = songs[currIndex].lyrics[index];
+
+    lyrics.innerHTML = lyric.text;
+    
+  }
+
+
+
 
 let down = false;
 progressBar.addEventListener("click",function(e){
@@ -94,83 +179,6 @@ progressVolum.addEventListener("click",function(e){
     player.volume = percent/100;
 });
 
-// List Song
-var songs = [{
-    stt : 0,
-    artist: "Track 1",
-    name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
-    url: "Music/Tu_Khi_Gap_Em.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-},
-{
-    stt : 1,
-    artist: "Track 2",
-    name: "Thương Em Là Điều Anh Không Ngờ Tới",
-    url: "Music/ThuongEmLaDieuAnhKhongTheNgo.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-},
-{
-    stt : 2,
-    artist: "Track 3",
-    name: "Tất Cả Sẽ Thay Anh ! ",
-    url: "Music/Tat_Ca_Se_Thay_Em.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-},
-{
-    stt : 3,
-    artist: "Track 4",
-    name: "Yêu Từ Xa  -  Hồ Việt Trung",
-    url: "Music/Yeu_Tu_Xa.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-},
-{
-    stt : 4,
-    artist: "Track 5",
-    name: "Ác Ma Đến Từ Thiên Đường",
-    url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-},
-{
-    stt : 5,
-    artist: "Track 6",
-    name: "Em Không Sai , Chúng Ta Sai",
-    url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
-    lyrics : [
-        ["Anh Thật Là Ngu Ngốc",20,25],
-        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
-        ["Lỡ Làm Người Yêu Khóc ",31,35],
-        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
-    ]
-}
-];
-
-var currIndex = -1;
-var lineIndex = 0;
 
 // Khu Vuc Viet Ham Karraaoke
 
