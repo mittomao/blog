@@ -13,7 +13,7 @@ const controls = document.querySelector(".controls");
 var duration = 0;
 
 // Lap Bai Hat 
-
+player.loop = true;
 loopButton.onclick = function(){
     player.currentTime =0;
     
@@ -100,39 +100,83 @@ var songs = [{
     artist: "Track 1",
     name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
     url: "Music/Tu_Khi_Gap_Em.mp3",
-    picture: "3.jpg"
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
 },
 {
     stt : 1,
     artist: "Track 2",
     name: "Thương Em Là Điều Anh Không Ngờ Tới",
     url: "Music/ThuongEmLaDieuAnhKhongTheNgo.mp3",
-    picture: "4.jpg"
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
 },
 {
     stt : 2,
     artist: "Track 3",
     name: "Tất Cả Sẽ Thay Anh ! ",
     url: "Music/Tat_Ca_Se_Thay_Em.mp3",
-    picture: "6.jpg"
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
 },
 {
     stt : 3,
     artist: "Track 4",
     name: "Yêu Từ Xa  -  Hồ Việt Trung",
     url: "Music/Yeu_Tu_Xa.mp3",
-    picture: "5.jpg"
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
 },
 {
     stt : 4,
     artist: "Track 5",
     name: "Ác Ma Đến Từ Thiên Đường",
     url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
-    picture: "2.jpg"
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
+},
+{
+    stt : 5,
+    artist: "Track 6",
+    name: "Em Không Sai , Chúng Ta Sai",
+    url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
+    lyrics : [
+        ["Anh Thật Là Ngu Ngốc",20,25],
+        ["Bảo Vệ Người Ấy Cũng Không Xong",27,30],
+        ["Lỡ Làm Người Yêu Khóc ",31,35],
+        ["Vậy Còn Xứng Đáng Yêu Không",36,40]
+    ]
 }
 ];
 
 var currIndex = -1;
+var lineIndex = 0;
+
+// Khu Vuc Viet Ham Karraaoke
+
+
+
+// 
 
 function showAlbum(data){
     const listAlbum = document.querySelector("#list-album");

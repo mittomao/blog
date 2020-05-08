@@ -585,7 +585,7 @@ h4.title{
 
 .right__entertaiment{
     width: 100%;
-    max-height: 100vh;
+    max-height: 120vh;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -597,31 +597,6 @@ h4.title{
     background-size: cover;
     /* backdrop-filter: blur(4px); */
 }
-.right__entertaiment .rec{
-    position: absolute;
-    top: 50px;
-    left: 100px;
-}
-.right__entertaiment .rec::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
-}
-
-.right__entertaiment .rec p{
-    font-size: 30px;
-    color: #ffffff;
-}
-
-
-
-
-
 
 /* footer */
 
