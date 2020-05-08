@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="form-login">
+        <div class="login-header">
+            <a href="#" data-id="sign-in" class="tab-item">Sign in</a>
+            <a href="#" data-id="sign-up" class="tab-item">Sign up</a>
+        </div>
+        <div class="login-content">
+            <div class ="form active-tab"  id="sign-in">
+                <h3>Form Login</h3>
+                <div class="input-group">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="" id="">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="checkBoxID" value="">
+                    <label for="checkBoxID">Remember to choose</label>
+                </div>
+                <button class="button button-login">Login</button>
+            </div>
+            <!-- Sign Up -->
+            <div class ="form" id="sign-up">
+                <h3>Form Sign up</h3>
+                <div class="input-group">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input type="mail" name="" id="">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="" id="">
+                </div>
+                <button class="button button-login">Submit</button>
+            </div>
+            <div class="icon-intro left">
+                <ul>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+            <div class="icon-intro right">
+                <ul>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<script>
+    const tab = document.querySelectorAll(".tab-item");
+    const contents= document.querySelectorAll(".form");
+    tab.forEach(element=>{
+    element.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const dataId = element.getAttribute("data-id");
+        showContent(dataId);
+    });
+});
+
+    function showContent(id){
+        for(let i = 0 ; i< contents.length;i++){
+            contents[i].classList.remove("active-tab");
+        }
+        let content = document.getElementById(id);
+        content.classList.add("active-tab");
+        // console.log(show)
+    }
+</script>
+</body>
+</html>

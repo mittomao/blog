@@ -190,52 +190,42 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cum molestiae iure totam quaerat explicabo vero sit eaque beatae suscipit labore consequatur rem sapiente ducimus vitae repudiandae, dolorem ad unde.
                         </div>
                         <div class="content right__entertaiment" id ="tab3">
-                            <div id="bg-artwork"></div>
-                            <div id="app-cover">
-                                <!-- <div id="bg-layer"></div> -->
-                                <div id="player">
-                                    <div id="player-track">
-                                        <div id="album-name"></div>
-                                        <div id="track-name"></div>
-                                        <div id="track-time">
-                                            <div id="current-time"></div>
-                                            <div id="track-length"></div>
+                            <div class="rec">
+                                <p>REC</p>
+                            </div>
+                            <h2 class="right__entertaiment-title">Media Music</h2>
+                            <div class="main-bg"></div>
+                            <div class="main-content">
+                                <audio id = "player" src="" type="audio/mp3">
+                                    <!-- <source src="Tat_Ca_Se_Thay_Em.mp3" type="audio/mp3"> -->
+                                </audio>
+                                <div class="audio-player">
+                                    <div class="controls">
+                                        <h4 class="title-music"></h4>
+                                        <div class="progressbar">
+                                            <div class="progress-time"></div>
                                         </div>
-                                        <div id="s-area">
-                                            <div id="ins-time"></div>
-                                            <div id="s-hover"></div>
-                                            <div id="seek-bar"></div>
+                                        <div class="time">
+                                            <span id="curtime">00:00</span>
+                                            <span>/</span>
+                                            <span id="durtime">00:00</span>
                                         </div>
-                                    </div>
-                                    <div id="player-content">
-                                        <div id="album-art">
-                                            <img src="./Music/Picture/remix.jpg" class="active" id="_1">
-                                            <div id="buffer-box">Buffering ...</div>
-                                        </div>
-                                        <div id="player-controls">
-                                            <div class="control">
-                                                <div class="button" id="play-previous">
-                                                    <i class="fa fa-backward"></i>
-                                                </div>
-                                            </div>
-                                            <div class="control">
-                                                <div class="button" id="play-pause-button">
-                                                    <i class="fa fa-play"></i>
-                                                </div>
-                                            </div>
-                                            <div class="control">
-                                                <div class="button" id="play-next">
-                                                    <i class="fa fa-forward"></i>
-                                                </div>
-                                            </div>
+                                        <div class="button-gr">
+                                            <span><i id="prevButton" class="fa fa-backward" aria-hidden="true"></i></span>
+                                            <span><i id="playerButton" class="fa fa-play-circle" aria-hidden="true"></i></span>
+                                            <span><i id ="loop" class="fa fa-undo" aria-hidden="true"></i></span>
+                                            <span><i id="volum" class="fa fa-volume-up" aria-hidden="true"></i></span>
+                                            <span class="progressVolum">
+                                                <div class="progressV"></div>
+                                            </span>
+                                            <span><i id="nextButton" class="fa fa-forward" aria-hidden="true"></i></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- List Danh Sach -->
-                            <div class="album">
-                                <ul id="list-album">
-                                    <li><i class="fa fa-play" aria-hidden="true"></i><h5 class = "h5" id = "stt_0">First</h5></li>
+                            <div class="albums">
+                                <ul id ="list-album">
+                                
                                 </ul>
                             </div>
                         </div>
