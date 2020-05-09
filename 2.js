@@ -57,7 +57,7 @@ var songs = [{
         {text : "Anh Thực Sự Ngu Ngôc" ,start : 67, end: 70},
         {text : "Bảo Vệ Người Ấy Cũng Không Xong" ,start : 70.5, end: 72.5},
         {text : "Lỡ Làm Người Yêu Khóc" ,start : 73, end: 75},
-        {text : "Thế Còn Xứng Đáng Yêu Không" ,start : 76, end: 78},
+        {text : "Thế Thì Còn Xứng Đáng Yêu Không" ,start : 76, end: 78},
     ]
 }
 ];
@@ -117,7 +117,7 @@ player.addEventListener("timeupdate",function(){
         return;
     }
 
-    var startTime = curentLyric[lineIndex].start;
+    
     var endTime = curentLyric[lineIndex].end;
 
     if(player.currentTime > endTime)
@@ -136,9 +136,8 @@ var nextLine = function (index) {
     }
     var lyric = songs[currIndex].lyrics[index];
 
-    lyrics.innerHTML = lyric.text;
-    
-  }
+    lyrics.innerHTML = lyric.text;  
+}
 
 
 
@@ -190,7 +189,7 @@ function showAlbum(data){
     const listAlbum = document.querySelector("#list-album");
     let str = "";
     data.map((item,index)=>{
-        str+=`<li class="music" data-img = '${item.picture}' data-id ="${index}" data-title = "${item.name}" data-url = "${item.url}"><span class="fa fa-play"></span><p>Track ${index+1}: ${item.name}</p></li>`;
+        str+=`<li class="music" data-img = '${item.picture}' data-id ="${index}" data-title = "${item.name}" data-url = "${item.url}"><span class="fa fa-music"></span><p>Track ${index+1}: ${item.name}</p></li>`;
         return str;
     });
     listAlbum.innerHTML = str;
@@ -216,10 +215,12 @@ function testActive(element){
        
         for (const item of musics) {
             item.classList.remove("active_s");
+            item.childNodes[0].classList.remove("hihi");
             item.childNodes[1].classList.remove("hehe");
         }
         
         element.classList.add("active_s");
+        element.childNodes[0].classList.add("hihi");   
         element.childNodes[1].classList.add("hehe");   
 }
 function stackMusic(url,title=""){
