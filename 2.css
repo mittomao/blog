@@ -154,19 +154,22 @@ h4.title-music{
     
 }
 .albums ul li{
-    padding: 5px 15px;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #fff; */
     position: relative;
     margin-bottom: 5px;
     cursor: pointer;
+    box-shadow: 0 0 5px rgb(40, 45, 47), 0 0 10px rgb(40, 45, 47);
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .albums ul li:not(.active_s){
-    background: rgba(56, 54, 54, 0.7);
-    opacity: 0.8;
+    background: linear-gradient(-180deg, rgb(40, 45, 47) 0%, rgb(29, 31, 32) 100%);
+    
+    /* opacity: 0.8; */
     
 }
 .albums ul li:hover:not(.active_s){
@@ -174,7 +177,7 @@ h4.title-music{
 }
 .albums ul li:not(.active_s) p{
     color: rgb(87, 81, 81);
-    padding-left: 20px;
+    padding: 5px 0 5px 30px;
 }
 
 .active_s{
@@ -208,6 +211,9 @@ p.hehe{
     text-transform: uppercase;
     animation: goText 6s ease-in infinite;
 }
+span.hihi{
+    animation: rung 1s ease infinite;
+}
 @keyframes goText{
     0%{
         transform: translateX(100px);
@@ -223,15 +229,12 @@ p.hehe{
     left: 5px;
     color: #fff;
     font-size: 16px;
-    padding: 5px;
-    border: 1px solid #fff;
-    border-radius: 50%;
     z-index: 100;
 }
 
-.active_s span{
+.albums ul li.active_s span.hihi{
     
-    background: #D6A2E8;
+    color: red;
 }
 
 
@@ -316,4 +319,32 @@ p.hehe{
     color: #fff;
     font-size: 1.5em;
     z-index: 111;
+    box-shadow: 0 0 20px #be2edd;
+    box-sizing: border-box;
+}
+
+.brid{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform:translateX(-50%);
+    background: url(chim.png) center no-repeat;
+    background-size: cover;
+    z-index: 111;
+    animation: goBird 6s ease-in infinite;
+
+}
+
+@keyframes goBird{
+    0%{
+        transform: translateX(100px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateX(-200px);
+    }
 }
