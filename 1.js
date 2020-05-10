@@ -165,6 +165,27 @@ const currorMain = document.querySelector("#curror");
 function createCurror(e){
     currorMain.style.top = e.pageY + 'px';
     currorMain.style.left = e.pageX + 'px';
-    currorMain.style.transition = 0.1 + "s" + "ease";
+    currorMain.style.transition = 0.01 + "s" + "ease";
 }
 window.addEventListener("mousemove" , createCurror);
+
+
+// Tao Hieu Ung Khi Load 
+
+const left = document.querySelectorAll(".section-left");
+const right = document.querySelectorAll(".default");
+
+left.forEach((item,i) => {
+    item.addEventListener("click",()=>{
+        //minus
+        let icon = item.children[0];
+        if(icon.classList.contains("fa-plus")){
+            icon.classList.replace("fa-plus","fa-minus");
+        }
+        else{
+            icon.classList.replace("fa-minus","fa-plus");
+        }
+        right[i].classList.toggle("active-section");
+})
+});
+        

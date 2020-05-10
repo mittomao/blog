@@ -212,6 +212,59 @@ body{
 .left__introduce{
     text-align: center;
     padding-bottom: 20px;
+   
+}
+.left__introduce section{
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.left__introduce section:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background: #7d5fff;
+    z-index: 1000;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%, 41% 51%);
+}
+
+.left__introduce section .section-left{
+    width: 20%;
+    background: #7d5fff;
+    z-index: 1000;
+    clip-path: polygon(0% 0%, 65% 0, 100% 50%, 65% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left__introduce section .section-left i.fa{
+    font-size: 20px;
+    color: #fff;
+}
+
+.left__introduce section .section-right{
+    width: 80%;
+}
+
+.default{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #dfe4ea;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    z-index:4;
+}
+
+section  .active-section{
+    left: 500px;
+    transition: all .5s ease-in-out;
 }
 
 h4.title{
@@ -225,24 +278,24 @@ h4.title{
     margin-bottom: 20px;
 }
 
-.left__introduce div{
+.left__introduce div.section-right >div{
     display: flex;
     justify-content: flex-start;
     padding-left : 20px;
     padding-bottom: 5px;
 }
-.left__introduce div i.fa{
+.left__introduce div.section-right >div i.fa{
     font-size: 20px;
     color: #ff3838;
     margin-right: 10px;
 }
-.left__introduce div i.fa:hover{
+.left__introduce div.section-right >div i.fa:hover{
     color: #7d5fff;
 }
 
-.left__introduce div h5{
+.left__introduce div.section-right >div h5{
     font-style: italic;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Css Thong Ke So Luong*/

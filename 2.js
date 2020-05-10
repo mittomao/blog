@@ -54,10 +54,10 @@ var songs = [{
     url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
     lyrics : [
         {text : "..." ,start : 0, end: 66},
-        {text : "Anh Thực Sự Ngu Ngôc" ,start : 67, end: 70},
-        {text : "Bảo Vệ Người Ấy Cũng Không Xong" ,start : 70.5, end: 72.5},
-        {text : "Lỡ Làm Người Yêu Khóc" ,start : 73, end: 75},
-        {text : "Thế Thì Còn Xứng Đáng Yêu Không" ,start : 76, end: 78},
+        {text : "Anh Thực Sự Ngu Ngôc" ,start : 67, end: 69.5},
+        {text : "Bảo Vệ Người Ấy Cũng Không Xong" ,start : 70, end: 72.5},
+        {text : "Lỡ Làm Người Yêu Khóc" ,start : 72.8, end: 75},
+        {text : "Thế Thì Còn Xứng Đáng Yêu Không" ,start : 75.3, end: 78},
     ]
 }
 ];
@@ -119,14 +119,16 @@ player.addEventListener("timeupdate",function(){
 
     
     var endTime = curentLyric[lineIndex].end;
-
+    
     if(player.currentTime > endTime)
     {
+        
         lineIndex=lineIndex+1;
+       
         lyrics.innerHTML = "";
+       
         nextLine(lineIndex);
     }
-    
 });
 
 const lyrics = document.querySelector(".lyrics");
