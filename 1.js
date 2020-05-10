@@ -189,3 +189,12 @@ left.forEach((item,i) => {
 })
 });
         
+
+// window.addEventListener("resize",function(){
+//     if(window.innerWidth<992)
+//     {
+//         document.querySelector(".is-show").classList.add("hideNav");
+//         backLeft.firstChild.classList.toggle("active-xoay");
+
+//     }
+// })

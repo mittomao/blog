@@ -8,9 +8,11 @@ h2.right__entertaiment-title{
     top: 0;
     left: 50%;
     transform:translateX(-50%);
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     font-size: 3em;
+    letter-spacing: .15em;
+    text-shadow: 0 0 50px rgba(255,255,255.85);
     z-index: 1000;
     margin-top:10px;
 }
@@ -37,7 +39,6 @@ h2.right__entertaiment-title{
     width: 50%;
     margin: 0 auto;
     text-align: center;
-   
     padding: 50px 20px 20px 0;
     border-radius: 5px;
     /* box-shadow: 0 0 10px #dfd3d3 , 0 0 30px #dfd3d3 , 0 0 50px #dfd3d3; */
@@ -347,4 +348,27 @@ span.hihi{
     100%{
         transform: translateX(-200px);
     }
+}
+
+@media (max-width:992px){
+    
+    .albums-md{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    h2.md-top{
+        top: 20%;
+        font-size: 2em;
+    }
+    .main-content-md{
+        bottom:50px;
+    }
+    .button-gr span{
+        margin: 0 5px;
+    }
+    .button-gr span i.fa{
+        font-size:20px;
+    }
+
 }
