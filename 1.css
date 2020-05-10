@@ -90,10 +90,25 @@ body{
     animation: go 3s linear infinite;
 }
 @media (max-width:992px){
-     h3.slogan-md{
-        font-size: 1.2em;
+    .header .header-item h3.slogan-md{
+        font-size: 1.3em;
         font-weight: 400;
         padding: 0 50px;
+    }
+    .header .header-item h3.loading-md{
+        font-size: 5em;   
+        letter-spacing: 2px;
+    }
+}
+@media (max-width:768px){
+    .header .header-item h3.slogan-xs{
+       font-size: 1.1em;
+       font-weight: 400;
+       padding: 0 40px;
+   }
+    .header .header-item h3.loading-xs{
+        font-size: 4em;   
+        letter-spacing: 1.5px;
     }
 }
 .header .header-item h5{
