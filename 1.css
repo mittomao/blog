@@ -158,18 +158,25 @@ body{
     bottom:0;
     left: 0;
     border: 1px solid gray;
-    border-radius: 5px;
+    box-shadow:0 9px gray;
+    border-radius: 2px;
+    z-index: 100;
 }
+
 .header .active-xoay{
-    transform:rotate(180deg);
+    transform:translate(5px,-4px);
+    box-shadow:5px  4px gray; 
 }
+
 
 .header #back-left i.fa{
     font-size: 20px;
     padding: 10px 20px;
     color: #7d5fff;
 }
-
+.header .active-xoay i.fa{
+    transform:rotate(180deg);
+}
 
 /* Main */
 .main{
@@ -653,7 +660,7 @@ h4.title{
 
 .right__entertaiment{
     width: 100%;
-    max-height: 120vh;
+    max-height: 150vh;
     height: 100vh;
     margin: 0;
     padding: 0;

@@ -33,7 +33,8 @@ idol.forEach((element,i) => {
 });
 
 backLeft.onclick = function () {
-    backLeft.firstChild.classList.toggle("active-xoay");
+    backLeft.classList.toggle("active-xoay");
+    // backLeft.firstChild.classList.toggle("active-xoay");
     document.querySelector(".is-show").classList.toggle("hideNav");
 }
 
