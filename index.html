@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-    .container-fluid{
+    /* .container-fluid{
         padding-left: 0;
         padding-right: 0;
-    }
-    .row{
+    } */
+    /* .row{
         margin-left: 0;
         margin-right: 0;
     }
     .col{
         padding-left: 0;
         padding-right: 0;
-    }
+    } */
     </style>
 </head>
   <body>
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col col-12 col-md-12 col-lg-3 is-show">
                     <div class="left left-md">
-                        <div class="left__img-box">
+                        <div class="left__img-box" id="avatar-logo">
                             <img src="feeling/love.png" alt="Loading..." id="logo-idol"> 
                             <span class="idol" data-id ="i_1">1</span>
                             <span class="idol" data-id ="i_2">2</span>
@@ -189,76 +189,90 @@
                             <a href="#" data-id="tab2" class="tab-item">Personal</a>
                             <a href="#" data-id="tab3" class="tab-item">Entertainment</a>
                         </div>
-                        <div class="right__content content active-tab" id ="tab1">
-                            <div class="container-fluid">
-                                <h2 class="top-post">Top Posts</h2>
-                                <form action="" method="post" class="form-top">
-                                    <div class="form-group">
-                                      <input type="text"
-                                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="...Quick Search">
+                        <div class="right__content" id = "right__content">
+                            <div class="content content-tips active-tab" id ="tab1">
+                                <div class="container-fluid">
+                                    <h2 class="top-post">Top Posts</h2>
+                                    <form action="" method="post" class="form-top">
+                                        <div class="form-group">
+                                          <input type="text"
+                                            class="form-control" name="" id="" aria-describedby="helpId" placeholder="...Quick Search">
+                                        </div>
+                                    </form>
+                                    <div class="row" id = "list-tin">
+                                        <!-- Lay Du Lieu Tu Server -->
                                     </div>
-                                </form>
-                                <div class="row" id = "list-tin">
-                                    <!-- Lay Du Lieu Tu Server -->
+                                    <ul class="right_pagination">
+                                        
+                                    </ul>
                                 </div>
-                                <ul class="right_pagination">
+                            </div>
+                            <!-- Tab2 -->
+                            <div class="content content-gradient" id ="tab2">
+                                <h2 class="top-post">Top Linear-Gradient</h2>
+                                <div class="container">
+                                    <div class="row" id="listColor">
+                                        <!-- Lay Du Lieu Tu Server -->
+                                    </div>
+                                    <!-- <div class="popup-color">
+                                        <p></p>
+                                        <span class="close-popop">
+                                            <i class="fa fa-expand" aria-hidden="true"></i>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- Tab3 -->
+                            <div class="content right__entertaiment" id ="tab3">
+                                <div class="lyrics"></div>
+                                <div class="brid"></div>
+                                <div class="top-left">
+                                    <div class="rec">
+                                        <p>REC</p>
+                                    </div>
+                                </div>
+                                <div class="bottom-left">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                </div>
+                                <div class="bottom-right">
+                                    <i class="fa fa-battery-quarter" aria-hidden="true"></i>
+                                </div>
+                                <!-- <div class="top-right"></div> -->
+                                <h2 class="right__entertaiment-title md-top">Media Music</h2>
+                                <div class="main-bg"></div>
+                                <div class="main-content main-content-md">
+                                    <audio id = "player" src="" type="audio/mp3">
+                                        <!-- <source src="Tat_Ca_Se_Thay_Em.mp3" type="audio/mp3"> -->
+                                    </audio>
+                                    <div class="audio-player">
+                                        <div class="controls">
+                                            <h4 class="title-music"></h4>
+                                            <div class="progressbar">
+                                                <div class="progress-time"></div>
+                                            </div>
+                                            <div class="time">
+                                                <span id="curtime">00:00</span>
+                                                <span>/</span>
+                                                <span id="durtime">00:00</span>
+                                            </div>
+                                            <div class="button-gr">
+                                                <span><i id="prevButton" class="fa fa-backward" aria-hidden="true"></i></span>
+                                                <span><i id="playerButton" class="fa fa-play-circle" aria-hidden="true"></i></span>
+                                                <span><i id ="loop" class="fa fa-undo" aria-hidden="true"></i></span>
+                                                <span><i id="volum" class="fa fa-volume-up" aria-hidden="true"></i></span>
+                                                <span class="progressVolum">
+                                                    <div class="progressV"></div>
+                                                </span>
+                                                <span><i id="nextButton" class="fa fa-forward" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="albums albums-md">
+                                    <ul id ="list-album">
                                     
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="content" id ="tab2">
-                            <h2 class="top-post">Top Personal</h2>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cum molestiae iure totam quaerat explicabo vero sit eaque beatae suscipit labore consequatur rem sapiente ducimus vitae repudiandae, dolorem ad unde.
-                        </div>
-                        <div class="content right__entertaiment" id ="tab3">
-                            <div class="lyrics"></div>
-                            <div class="brid"></div>
-                            <div class="top-left">
-                                <div class="rec">
-                                    <p>REC</p>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="bottom-left">
-                                <i class="fa fa-camera" aria-hidden="true"></i>
-                            </div>
-                            <div class="bottom-right">
-                                <i class="fa fa-battery-quarter" aria-hidden="true"></i>
-                            </div>
-                            <!-- <div class="top-right"></div> -->
-                            <h2 class="right__entertaiment-title md-top">Media Music</h2>
-                            <div class="main-bg"></div>
-                            <div class="main-content main-content-md">
-                                <audio id = "player" src="" type="audio/mp3">
-                                    <!-- <source src="Tat_Ca_Se_Thay_Em.mp3" type="audio/mp3"> -->
-                                </audio>
-                                <div class="audio-player">
-                                    <div class="controls">
-                                        <h4 class="title-music"></h4>
-                                        <div class="progressbar">
-                                            <div class="progress-time"></div>
-                                        </div>
-                                        <div class="time">
-                                            <span id="curtime">00:00</span>
-                                            <span>/</span>
-                                            <span id="durtime">00:00</span>
-                                        </div>
-                                        <div class="button-gr">
-                                            <span><i id="prevButton" class="fa fa-backward" aria-hidden="true"></i></span>
-                                            <span><i id="playerButton" class="fa fa-play-circle" aria-hidden="true"></i></span>
-                                            <span><i id ="loop" class="fa fa-undo" aria-hidden="true"></i></span>
-                                            <span><i id="volum" class="fa fa-volume-up" aria-hidden="true"></i></span>
-                                            <span class="progressVolum">
-                                                <div class="progressV"></div>
-                                            </span>
-                                            <span><i id="nextButton" class="fa fa-forward" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="albums albums-md">
-                                <ul id ="list-album">
-                                
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -277,7 +291,9 @@
         </div>
         <h5>&copy; <b>Copyright - Mit To Mao</b></h5>
     </div>
-    <div class="change-bg"></div>
+    <div class="change-bg" id="switch">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    
@@ -286,5 +302,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="1.js"></script>
     <script src="2.js"></script>
+    <script src="3.js"></script>
 </body>
 </html>

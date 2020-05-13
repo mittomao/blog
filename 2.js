@@ -17,6 +17,7 @@ var songs = [{
     artist: "Track 1",
     name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
     url: "Music/Tu_Khi_Gap_Em.mp3",
+    picture : "6.jpg"
     
 },
 {
@@ -24,6 +25,7 @@ var songs = [{
     artist: "Track 2",
     name: "Thương Em Là Điều Anh Không Ngờ Tới",
     url: "Music/ThuongEmLaDieuAnhKhongTheNgo.mp3",
+    picture : "2.jpg"
     
 },
 {
@@ -31,6 +33,7 @@ var songs = [{
     artist: "Track 3",
     name: "Tất Cả Sẽ Thay Anh ! ",
     url: "Music/Tat_Ca_Se_Thay_Em.mp3",
+    picture : "3.jpg"
     
 },
 {
@@ -38,6 +41,7 @@ var songs = [{
     artist: "Track 4",
     name: "Yêu Từ Xa  -  Hồ Việt Trung",
     url: "Music/Yeu_Tu_Xa.mp3",
+    picture : "4.jpg"
     
 },
 {
@@ -45,6 +49,7 @@ var songs = [{
     artist: "Track 5",
     name: "Ác Ma Đến Từ Thiên Đường",
     url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
+    picture : "5.jpg"
     
 },
 {
@@ -52,6 +57,7 @@ var songs = [{
     artist: "Track 6",
     name: "Em Không Sai , Chúng Ta Sai",
     url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
+    picture : "1.jpg",
     lyrics : [
         {text : "..." ,start : 0, end: 66},
         {text : "Em Thực Sự Ngu Ngôc" ,start : 67, end: 69.5},
@@ -210,6 +216,11 @@ musics.forEach(music=>{
         player.play();
         titleMusic.innerHTML = `<marquee>${music.getAttribute("data-title")}</marquee>`;
         currIndex = parseInt(music.getAttribute("data-id"));
+        const mainBg = document.querySelector(".main-bg");
+        const avatrLogo = document.querySelector("#avatar-logo");
+        mainBg.style.backgroundImage = `url(./Music/Background/${music.getAttribute("data-img")})`; 
+        avatrLogo.style.backgroundImage = `url(./Music/Background/${music.getAttribute("data-img")})`; 
+
     }
 });
 

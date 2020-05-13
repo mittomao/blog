@@ -22,8 +22,9 @@ h2.right__entertaiment-title{
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background: url(bg3.jpg) no-repeat;
+    background: url(./Music/Background/1.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .main-content{
     width: 100%;
@@ -267,7 +268,7 @@ span.hihi{
     }
 }
 .rec p{
-    font-size: 2em;
+    font-size: 1.6em;
     color: #ffffff;
     animation: rung 1s ease infinite;
 }
@@ -276,10 +277,10 @@ span.hihi{
 .top-left, .bottom-left, .bottom-right, .top-right{
     position: absolute;
   
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
    
-    background:#000;
+    background:none;
     z-index: 99;
 
     display: flex;
@@ -307,7 +308,7 @@ span.hihi{
     border-right: 2px solid #fff;
 }
 .bottom-right i.fa , .bottom-left i.fa {
-    font-size:2em;
+    font-size:1.6em;
     color: #fff;
     animation: rung 1s ease infinite;
 }
@@ -340,13 +341,13 @@ span.hihi{
 
 @keyframes goBird{
     0%{
-        transform: translateX(100px);
+        transform: translateX(1000px);
     }
     50%{
         transform: translateY(20px);
     }
     100%{
-        transform: translateX(-200px);
+        transform: translateX(-1000px);
     }
 }
 

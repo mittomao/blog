@@ -199,3 +199,11 @@ left.forEach((item,i) => {
 
 //     }
 // })
+// const switchB = document.querySelector("#switch");
+
+// function toggleBgColor(){
+//     const tab1 = document.querySelector(".right__content");
+//     tab1.classList.toggle("active-showBgColor");
+// }
+
+// switchB.addEventListener("click",toggleBgColor)
