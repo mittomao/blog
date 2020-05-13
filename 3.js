@@ -24,11 +24,17 @@ const colors = [
 function showColor(){
     let str = "";
         for (const value of arguments) {
-            str+=`<div class="col col-md-3">
+            str+=`<div class="col col-6 col-md-4 col-lg-3">
                     <div class="box-linear">
                         <h5>${value.id}</h5>
                         <div class="box-linear__content" style='${value.bgColor}'></div>
                         <a href="#" class = "save-bg" data-bg = "${value.bgColor}"><i class="fa fa-save"></i></a>
+                        <div class="popup-color">
+                            <p>${value.bgColor}</p>
+                            <span class="close-popop">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>`;
         }
@@ -37,20 +43,28 @@ function showColor(){
 }
 showColor(...colors);
 
-const saveC = document.querySelectorAll(".save-bg");
-const popup = document.querySelector(".popup-color");
-saveC.forEach(el=>{
-    el.addEventListener("click",function(e){
-        e.preventDefault();
-        //Lay Cha Cua nO
-        popup.classList.add("active-bg");
-        popup.children[0].innerHTML = el.getAttribute("data-bg");
-    });
-})
 
-const closePopop = document.querySelector(".popup-color");
-closePopop.addEventListener("click",function(){
-    popup.classList.remove("active-bg");
-});
+function togglePopup(){
+    const saveC = document.querySelectorAll(".save-bg");
+    const popup = document.querySelectorAll(".popup-color");
+    const closePopop = document.querySelectorAll(".popup-color");
+    
+    saveC.forEach((el,index)=>{
+        el.addEventListener("click",function(e){
+            e.preventDefault();
+            //Lay Cha Cua nO
+            popup[index].classList.add("active-bg");
+        });
+    })
+    // Dong Tab
+    closePopop.forEach((el,index)=>{
+        el.addEventListener("click",function(e){
+            e.preventDefault();
+            popup[index].classList.remove("active-bg");
+        });
+    })
+}
+
+togglePopup();
 
 
