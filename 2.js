@@ -15,8 +15,8 @@ var duration = 0;
 var songs = [{
     stt : 0,
     artist: "Track 1",
-    name: "Từ Khi Gặp Em - Trịnh Thăng Bình",
-    url: "Music/Tu_Khi_Gap_Em.mp3",
+    name: "Tình Nhân Ơi",
+    url: "Music/Tinh_Nhan_Oi.mp3",
     picture : "6.jpg"
     
 },
@@ -39,8 +39,8 @@ var songs = [{
 {
     stt : 3,
     artist: "Track 4",
-    name: "Yêu Từ Xa  -  Hồ Việt Trung",
-    url: "Music/Yeu_Tu_Xa.mp3",
+    name: "Once Again",
+    url: "Music/Once_Again.mp3",
     picture : "4.jpg"
     
 },
