@@ -68,3 +68,45 @@ function togglePopup(){
 togglePopup();
 
 
+// Edit Bg
+
+const formG = document.querySelector(".try-gradient");
+const showG = document.querySelector(".question");
+const closeG = document.querySelector(".close-try");
+
+function showFormGradient(e){
+    e.preventDefault();
+    formG.classList.add("active-showG");
+}
+function closeFormGradient(){
+    formG.classList.remove("active-showG");
+}
+
+showG.addEventListener("click",showFormGradient);
+closeG.onclick = closeFormGradient;
+
+const objColor = {};
+const hesogoc = document.querySelector("#hesogoc");
+const buttonTry = document.querySelector("#button-try");
+buttonTry.addEventListener("click",function(){
+    let content="";
+    const color1 = document.querySelector("#color1").value;
+    const color2 = document.querySelector("#color2").value;
+    const result = document.querySelector("#result-color");
+    const demo = document.getElementById("box-try");
+    const pos = document.querySelector("#position").value;
+    
+    if(objColor.hsg!==""&&objColor.hsg!==undefined)
+    {
+        content = `linear-gradient(${objColor.hsg}deg, ${color1} , ${color2})`;
+    }
+    else{
+        content = `linear-gradient(to ${pos}, ${color1} , ${color2})`;
+    }
+    demo.style.background = content;
+    result.value = "background-image : " + content;
+});
+hesogoc.addEventListener("keyup",function(){
+    objColor.hsg = hesogoc.value;
+    console.log(objColor)
+})

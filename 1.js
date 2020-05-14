@@ -107,10 +107,10 @@ const items = [
 
 function showData(){
     let str = "";
-        for (const value of arguments) {
-            str+=`<div class="col col-md-6 col-12 col-lg-6">
+        for (const value of arguments) {//col-md-6 col-12 col-lg-6
+            str+=`<div class="col-12">
                 <div class="card">
-                    <a href="#" class="card-title"><i class="fa fa-share mr-2"></i>${value.title}</a>
+                    <a href="${value.link}" class="card-title"><i class="fa fa-share mr-2"></i>${value.title}</a>
                     <h5 class="card-subject">${value.catagory} - <span>${value.subject}</span></h5>
                     <p class="card-link">${value.link}</p>
                     <p class="card-date">${value.date}</p>
@@ -207,3 +207,4 @@ left.forEach((item,i) => {
 // }
 
 // switchB.addEventListener("click",toggleBgColor)
+

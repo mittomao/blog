@@ -115,7 +115,7 @@ body{
     position:absolute;
     bottom:0;
     right: 50px;
-    color: #fff;
+    color: red;
     text-shadow: 0 0 10px #ffffff;
     font-size: 14px;
 }
@@ -675,8 +675,81 @@ h4.title{
 }
 
 /* pHan Linear-Gradient */
+
+
 .content-gradient{
     background-color: #f6f6f6;
+}
+.content-gradient a span{
+    color: #7d5fff;
+    font-size: 16px;
+    padding: 0 5px;
+    background: lime;
+}
+
+.content-gradient .try-gradient{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 8px #9e8cee;
+    margin: 15px 0;
+    display: none; 
+    position: relative;
+}
+.content-gradient .try-gradient>div{
+    display: flex;
+}
+
+.content-gradient .active-showG{
+    display: block;
+    animation: goFormGradien 1s ease-in-out;
+}
+@keyframes goFormGradien{
+    from{
+        transform:translateX(-1000px);
+    }
+    to{
+        transform:translateX(0);
+    }
+}
+.try-gradient__function{
+    width: 40%;
+    padding: 20px;
+    height: 100%;
+}
+.try-gradient__display{
+    padding: 20px;
+    width: 60%;
+    height: 100%;
+}
+
+.try-gradient__display .box-try{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: gray;
+}
+
+.close-try{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.close-try i.fa{
+    font-size:2em;
+    padding: 10px 15px;
+    color: #fff;
+    background: rgb(170, 74, 74);
+}
+
+
+/* Khu Vuc Cac Box Hien Thi Demo */
+.title-gradient{
+    font-size:30px;
+    color: lime;
+    border-bottom: 2px dashed lime;
+    padding: 10px 0;
+    display: inline-block;
 }
 .box-linear{
     max-height: 300px;

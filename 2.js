@@ -49,7 +49,7 @@ var songs = [{
     artist: "Track 5",
     name: "Ác Ma Đến Từ Thiên Đường",
     url: "Music/Ac_Ma_Tu_Thien_Duong.mp3",
-    picture : "5.jpg"
+    picture : "1.jpg"
     
 },
 {
@@ -57,7 +57,7 @@ var songs = [{
     artist: "Track 6",
     name: "Em Không Sai , Chúng Ta Sai",
     url: "Music/Em-Khong-Sai-Chung-Ta-Sai.mp3",
-    picture : "1.jpg",
+    picture : "5.jpg",
     lyrics : [
         {text : "..." ,start : 0, end: 66},
         {text : "Em Thực Sự Ngu Ngôc" ,start : 67, end: 69.5},
