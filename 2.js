@@ -60,8 +60,8 @@ var songs = [{
     picture : "5.jpg",
     lyrics : [
         {text : "..." ,start : 0, end: 66},
-        {text : "Em Thực Sự Ngu Ngôc" ,start : 67, end: 69.5},
-        {text : "Yêu Một Người Quá Vô Tâm... " ,start : 70, end: 72.5},
+        {text : "Anh Thực Sự Ngu Ngôc" ,start : 67, end: 69.5},
+        {text : "Bảo Vệ Người Ấy Cũng Không Xong... " ,start : 70, end: 72.5},
         {text : "Lỡ Làm Người Yêu Khóc" ,start : 72.8, end: 75},
         {text : "Thế Thì Còn Xứng Đáng Yêu Không" ,start : 75.3, end: 78},
     ]
