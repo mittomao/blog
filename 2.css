@@ -60,7 +60,7 @@ h4.title-music{
     border-radius: 10px;
 }
 .progress-time{
-    width: 0%;
+    width: 0;
     height: 8px;
     background: aqua;
     position: relative;

@@ -217,9 +217,9 @@ musics.forEach(music=>{
         titleMusic.innerHTML = `<marquee>${music.getAttribute("data-title")}</marquee>`;
         currIndex = parseInt(music.getAttribute("data-id"));
         const mainBg = document.querySelector(".main-bg");
-        const avatrLogo = document.querySelector("#avatar-logo");
+        // const avatrLogo = document.querySelector("#avatar-logo");
         mainBg.style.backgroundImage = `url(./Music/Background/${music.getAttribute("data-img")})`; 
-        avatrLogo.style.backgroundImage = `url(./Music/Background/${music.getAttribute("data-img")})`; 
+        // avatrLogo.style.backgroundImage = `url(./Music/Background/${music.getAttribute("data-img")})`; 
 
     }
 });

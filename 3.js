@@ -47,7 +47,7 @@ showColor(...colors);
 function togglePopup(){
     const saveC = document.querySelectorAll(".save-bg");
     const popup = document.querySelectorAll(".popup-color");
-    const closePopop = document.querySelectorAll(".popup-color");
+    const closePopop = document.querySelectorAll(".close-popop");
     
     saveC.forEach((el,index)=>{
         el.addEventListener("click",function(e){
@@ -105,8 +105,31 @@ buttonTry.addEventListener("click",function(){
     }
     demo.style.background = content;
     result.value = "background-image : " + content;
+    hesogoc.value = ""
 });
 hesogoc.addEventListener("keyup",function(){
-    objColor.hsg = hesogoc.value;
-    console.log(objColor)
+    if(isNaN(hesogoc.value))
+    {
+        console.log("La CHu");
+        objColor.hsg =0;
+    }
+    else{
+        objColor.hsg = hesogoc.value;
+    }
 })
+
+// Tinh
+
+const timeLine = document.querySelector(".timeline");
+const posTime = document.querySelector(".timeline-progress");
+const tab2G = document.querySelector("body")
+timeLine.addEventListener("click",function(e){
+    posTime.style.height = e.offsetY + "px";
+    const a = ((e.offsetY/timeLine.offsetHeight))*tab2G.offsetHeight;
+    window.scrollTo({
+        top : a,
+        left:0,
+        behavior: 'smooth'
+    });
+    // console.log(((e.offsetY/timeLine.offsetHeight))*tab2G.offsetHeight,tab2G.offsetHeight);
+});

@@ -7,6 +7,12 @@
 body{
     /* box-sizing: border-box; */
     /* cursor: none; */
+    height: auto;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none; 
+    overflow: hidden;
 }
 #curror{
     position: absolute;
@@ -143,12 +149,12 @@ body{
 
 @keyframes go{
     0%{
-        background-position-y: 300px;
+        background-position-y: 500px;
         /* background-position-x: 100px; */
     }
     
-    50%,100%{
-        background-position-y: 100px;
+    100%{
+        background-position-y: -100px;
         /* background-position-x: 30px; */
     }
 }
@@ -206,9 +212,10 @@ body{
     position: relative;
 }
 .main .left #avatar-logo{
+    background-image: url(./Image/okok.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: posBg 3s linear infinite;
+    /* animation: posBg 3s linear infinite; */
     box-sizing: border-box;
 }
 @keyframes posBg{
@@ -242,7 +249,7 @@ body{
     border-radius: 50%;
     object-fit: cover;
     position: absolute;
-    box-shadow: 0 0 5px #7efff5;
+    box-shadow: 0 0 10px #e4ae1b;
 }
 
 .left__introduce{
@@ -679,7 +686,43 @@ h4.title{
 
 .content-gradient{
     background-color: #f6f6f6;
+    position: relative;
 }
+.content-gradient::-webkit-scrollbar{
+    display: none;
+    overflow: hidden;
+}
+/* Css Phan Time Line */
+.timeline{
+    position:fixed;
+    bottom: 30px;
+    right:50px;
+    background: rgb(165, 165, 184);
+    border-radius: 10px;
+    height: 150px;
+    cursor: pointer;
+    z-index: 100;
+}
+.timeline-progress{
+    width: 8px;
+    height: 0;
+    background: rgb(226, 149, 200);
+    position: relative;
+    border-radius: 2px;
+}
+.timeline-progress:before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: lime;
+}
+
+/* End */
 .content-gradient a span{
     color: #7d5fff;
     font-size: 16px;
@@ -857,6 +900,7 @@ h4.title{
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    z-index: 1001;
 }
 
 /* footer */

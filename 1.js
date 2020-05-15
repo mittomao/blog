@@ -108,7 +108,7 @@ const items = [
 function showData(){
     let str = "";
         for (const value of arguments) {//col-md-6 col-12 col-lg-6
-            str+=`<div class="col-12">
+            str+=`<div class="col-8 offset-md-2">
                 <div class="card">
                     <a href="${value.link}" class="card-title"><i class="fa fa-share mr-2"></i>${value.title}</a>
                     <h5 class="card-subject">${value.catagory} - <span>${value.subject}</span></h5>
