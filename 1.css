@@ -36,6 +36,7 @@ body::-webkit-scrollbar{
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 .header .header-item{
     position: absolute;
@@ -46,7 +47,51 @@ body::-webkit-scrollbar{
     display: none;
     padding-top: 20px;
 }
-.header .header-item:nth-child(1){
+
+.header span.boxS{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border: 1px solid white;
+    box-shadow: 0 0 1px #fff;
+    animation:xoay 6s ease-in-out infinite;
+    z-index: 0;
+    /* border-radius: 15px; */
+    width: 50px;
+    height : 50px;
+}
+@keyframes xoay{
+    0%{
+        transform:translateY(200px);
+        /* top: 50%;
+        left: 50%;
+        transform:rotate(180deg); */
+        /* border-radius: -25% 56% 34% 46%; */
+    }
+     50%{
+        
+        transform:translateY(0) rotate(360deg);
+        /* top: 100%;
+        left: 50%;
+        transform:rotate(270deg); */
+
+        /* transform:rotate(360deg); */
+     }
+        /* border-radius: 15% 66% 14% 46%; */
+   
+    75%,100%{
+        
+        bottom: 0;
+        left: 50%;
+        /*transform:rotate(360deg); */
+
+        
+
+        /* border-radius: 25% 36% 14% 76%; */
+
+    }
+}
+/* .header .header-item:nth-child(1){
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 .header .header-item:nth-child(2){
@@ -58,7 +103,7 @@ body::-webkit-scrollbar{
 }
 .header .header-item:nth-child(4){
     background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-}
+} */
 
 
 .header .active-s{
@@ -80,6 +125,7 @@ body::-webkit-scrollbar{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: go 3s linear infinite;
+    z-index: 100;
     /* line-height: 2px; */
 }
 
@@ -529,7 +575,16 @@ h4.title{
     padding: 16px 0;
     width: 33.33%;
     text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
 }
+.right .right__tab a i.fa{
+    font-size:1.5em;
+    color: red;
+    padding-right: 10px;
+}
+
 .right .right__tab a:focus{
     background: #7d5fff;
     box-shadow: 0 0 3px #7d5fff;
@@ -545,6 +600,8 @@ h4.title{
     box-shadow: 0 0 3px #7d5fff;
     color: #ffffff;
 }
+
+
 .content{
     display: none;
     overflow: hidden;
@@ -692,10 +749,15 @@ h4.title{
     display: none;
     overflow: hidden;
 }
+.content-gradient .hide-listG{
+   display: none;
+}
+
+
 /* Css Phan Time Line */
 .timeline{
     position:fixed;
-    bottom: 30px;
+    bottom: 80px;
     right:50px;
     background: rgb(165, 165, 184);
     border-radius: 10px;
@@ -713,7 +775,7 @@ h4.title{
 .timeline-progress:before{
     content: '';
     position: absolute;
-    bottom:0;
+    bottom:-10px;
     left: 50%;
     transform:translateX(-50%);
     width: 25px;
@@ -923,23 +985,21 @@ h4.title{
 
 /* Thay Doi Mau Nen WEB */
 
-/* .change-bg{
+.change-action{
    position: fixed;
-   bottom: 30px;
+   bottom: 20px;
    right: 30px;
    z-index: 1001;
-   border: 1px solid gray;
+   
+}
+.change-action i.abc{
+    padding: 10px;
+    color: red;
+    font-size: 25px;
+    border: 1px solid gray;
    border-radius: 10px;
 }
-.change-bg i.fa{
-    padding: 10px 15px;
-    color: yellow;
-    font-size: 30px;
-}
 
-.active-showBgColor{
-    background-color:rgb(34, 40, 49);
-} */
 
 
 /* Phan Trang */
@@ -957,10 +1017,37 @@ h4.title{
 }
 
 
+.popup-modal{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    width: 450px;
+    height: 350px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(36, 37, 38, 0.08)
+}
+h4.welcom-modal{
+    text-align: center;
+    margin:10px 0;
+    font-size: 20px;
+    color: #7d5fff;
+}
 
 
-
-
+.list-action{
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+    display: flex;
+    background: rgb(219, 211, 211);
+}
+.list-action i.fa{
+    padding: 10px 20px;
+    font-size: 25px;
+    color: #7d5fff;
+}
 
 
 

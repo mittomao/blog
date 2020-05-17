@@ -20,7 +20,7 @@ const colors = [
     {id: 19, bgColor: "background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);"},
     {id: 20, bgColor: "background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);"},
 ];
-
+// localStorage.setItem("colors",JSON.stringify(colors));
 function showColor(){
     let str = "";
         for (const value of arguments) {
@@ -77,9 +77,12 @@ const closeG = document.querySelector(".close-try");
 function showFormGradient(e){
     e.preventDefault();
     formG.classList.add("active-showG");
+    listColor.classList.add("hide-listG");
 }
 function closeFormGradient(){
     formG.classList.remove("active-showG");
+    listColor.classList.remove("hide-listG");
+
 }
 
 showG.addEventListener("click",showFormGradient);

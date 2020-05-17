@@ -106,9 +106,11 @@ const items = [
 ];
 
 function showData(){
+    
+    let listTin = document.getElementById("list-tin");
     let str = "";
         for (const value of arguments) {//col-md-6 col-12 col-lg-6
-            str+=`<div class="col-8 offset-md-2">
+            str+=`<div class="col-md-8 col-12 offset-md-2 ">
                 <div class="card">
                     <a href="${value.link}" class="card-title"><i class="fa fa-share mr-2"></i>${value.title}</a>
                     <h5 class="card-subject">${value.catagory} - <span>${value.subject}</span></h5>
@@ -117,7 +119,7 @@ function showData(){
                 </div>
             </div>`;
         }
-    return str;
+    listTin.innerHTML =  str;
 }
 
 // // Phan Trang
@@ -152,9 +154,8 @@ function showData(){
 // // }
 
 
-let listTin = document.getElementById("list-tin");
 window.onload = function(){
-    listTin.innerHTML = showData(...items);
+    showData(...items);
     // let listPagi = document.querySelector(".right_pagination");
     // listPagi.innerHTML = phantrang(items,3);
 }
@@ -199,12 +200,45 @@ left.forEach((item,i) => {
 
 //     }
 // })
-// const switchB = document.querySelector("#switch");
+//  const switchB = document.querySelector("#switch");
 
 // function toggleBgColor(){
-//     const tab1 = document.querySelector(".right__content");
+//     const tab1 = document.querySelector(".content-tips");
 //     tab1.classList.toggle("active-showBgColor");
 // }
-
 // switchB.addEventListener("click",toggleBgColor)
 
+function randomBox(){
+    const header = document.querySelector(".header");
+    for(let i = 0 ; i < 10;i++)
+    {
+        let span = document.createElement("span");
+        span.className="boxS";
+        header.appendChild(span);
+    }
+   
+    const listSpan = document.querySelectorAll(".header span");
+    listSpan.forEach(sp=>{
+        setInterval(() => {
+            const rd_top = Math.random();
+            const rd_left = Math.random();
+            const rd_Border = Math.random();
+            sp.style.top = rd_top*99+"%";
+            sp.style.left = rd_left*99+"%";
+            // sp.style.borderRadius = rd_Border*100 +"%";
+        }, 3000);
+    });
+}
+randomBox();
+
+const searchTitle = document.querySelector("#search-title");
+
+searchTitle.onkeyup = function () {
+    const content = this.value;
+    const items_demo = [...items];
+    const a = items_demo.filter((item,index)=>{
+        return item.subject.indexOf(content)===0;
+    });
+    console.log(a)
+    showData(...a);
+}
