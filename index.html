@@ -6,9 +6,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <!-- script -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script src="./assets/javascripts/tweenmax/gsap.min.js"></script>
+    <script src="./assets/javascripts/tweenmax/SplitText.min.js"></script>
     <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="1.css">
     <link rel="stylesheet" href="2.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
@@ -36,8 +45,6 @@
         <div class="header-item active-s">
             <h3 class="slogan slogan-md slogan-xs">Cuộc Sống Luôn Cho Ta Một Cơ Hội Nếu Như Biết Cố Gắng ! Ngày Mai Sẽ Là Một Ngày Tuyệt Vời !</h3>
             <h5>Anonymous</h5>
-            <div id="_1"></div>
-            <div id="_2"></div>
         </div>
         <div class="header-item">
             <h3 class="slogan slogan-md slogan-xs">Con Chim Có Thể Đậu Ở Bất Kỳ Cành Cây Nào Nó Muốn Mà Không Sợ Cành Cây Gẫy. Bởi Vì Niềm Tin Của Nó Vào Đôi Cánh Chứ Không Phải Cái Cây.</h3>
@@ -61,9 +68,9 @@
                         <div class="left__img-box" id="avatar-logo">
                             <img src="Image/1.png" alt="..." id="logo-idol"> 
                             <span class="idol" data-id ="i_1">1</span>
-                            <span class="idol" data-id ="i_2">2</span>
-                            <span class="idol" data-id ="i_3">3</span>
-                            <span class="idol" data-id ="i_4">4</span>
+                            <span class="idol" data-id ="i_2">9</span>
+                            <span class="idol" data-id ="i_3">9</span>
+                            <span class="idol" data-id ="i_4">8</span>
                         </div>
                         <div class="left__introduce">
                             <h4 class="title">Introduce</h4>
@@ -357,45 +364,33 @@
             <i class="fa fa-github"></i>
         </div> -->
     </div>
-
-    <!-- <div class="popup-modal">
-        <h4 class="welcom-modal">Welcom To Mit To Mao</h4>
-        <div class="avatar">
-            <img src="feeling/like.png" alt="No IMG" id = "avatar">
-        </div>
-        <div class="icon-feeling">
-            <div class="heart" data-type="like">
-                <img src="./feeling/icon/like.ico" alt="" class="icon-fb">
-            </div>
-            <div class="heart" data-type="love">
-                <img src="./feeling/icon/love.ico" alt="" class="icon-fb">
-            </div>
-            <div class="heart" data-type="angry">
-                <img src="./feeling/icon/care.ico" alt="" class="icon-fb">
-            </div>    
-            <div class="heart" data-type="haha">
-                <img src="./feeling/icon/haha emoji.ico" alt="" class="icon-fb">
-            </div>
-            <div class="heart" data-type="wow">
-                <img src="./feeling/icon/wow.ico" alt="" class="icon-fb">
-            </div>
-            <div class="heart" data-type="sad">
-                <img src="./feeling/icon/sad emoji.ico" alt="" class="icon-fb">
-            </div>
-            <div class="heart" data-type="angry">
-                <img src="./feeling/icon/angry face.ico" alt="" class="icon-fb">
-            </div> 
-        </div> 
-    </div> -->
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="1.js"></script>
     <script src="2.js"></script>
     <script src="3.js"></script>
+    <script>
+        $(function () {
+            
+            function random(max,min)
+            {
+                return (Math.random()*(max-min)) + min;
+            }
+            setInterval(() => {
+                const text = $(".active-s");
+            const split = new SplitText(text);
+                $(split.chars).each(function () { 
+                TweenMax.from($(this),2.5,{ 
+                    opacity: 0,
+                    x: random(500,-500),
+                    y: random(500,-500),
+                    z: random(500,-500)
+                 }) 
+             })
+            }, 10000);
+          });
+    </script>
 </body>
 </html>

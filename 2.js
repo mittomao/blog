@@ -181,9 +181,11 @@ progressBar.addEventListener("mousemove",function(e){
 // Cho Volume
 
 progressVolum.addEventListener("click",function(e){
-    progressV.style.width = e.offsetX + "px";
-    let percent = (e.offsetX/progressVolum.offsetWidth)*100;
-    player.volume = percent/100;
+    progressV.style.height = e.offsetY + "px";
+    let percent = (e.offsetY/progressVolum.offsetHeight)*100;
+    player.volume = 1-percent/100;
+    console.log(1-percent/100)
+    
 });
 
 

@@ -100,11 +100,11 @@ h4.title-music{
 }
 
 .progressVolum{
-    width: 70px;
-    height: 8px;
+    height: 70px;
+    width: 10px;
     margin: 0;
     padding: 0;
-    background: rgb(255, 255, 255);
+    background: rgb(89, 191, 216);
     display: none;
     position: relative;
     transition: all .3s ease;
@@ -112,7 +112,6 @@ h4.title-music{
 .active{
     display: inline-block;
 }
-
 .progressVolum::before{
     content:'';
     position: absolute;
@@ -123,21 +122,21 @@ h4.title-music{
     border: 1px solid aqua;
 }
 .progressV{
-    width: 100%;
-    height: 8px;
-    background: #000;
+    width: 10px;
+    height: 0;
+    background: rgb(255, 255, 255);
     position: relative;
 }
 .progressV::before{
     content: '';
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform:translateY(-50%);
-    width: 8px;
-    height: 14px;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 20px;
+    height: 7px;
     background: rgb(230, 130, 15);
-    display: block;
+    border-radius: 20%;
 }
 
 .albums{

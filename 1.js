@@ -6,7 +6,7 @@ const logoIdol = document.querySelector("#logo-idol");
 const backLeft = document.querySelector("#back-left");
 
 const feelings = ["like.png","love.png","care.png","haha.png","wow.png","sad.png","angry.png"];
-const idols = ["6.gif","2.gif","3.gif","4.gif"];
+// const idols = ["6.gif","2.gif","3.gif","4.gif"];
 const obj = {};
 const obj1 = {};
 heart.forEach((element,i) => {
@@ -23,14 +23,14 @@ heart.forEach((element,i) => {
 
 // Idol Trộn
 
-idol.forEach((element,i) => {
-    let dataId = element.getAttribute("data-id")
-    obj1[dataId] = idols[i];
-    element.addEventListener("click",()=>{
-        element.classList.toggle("active-idol");
-        logoIdol.setAttribute("src" , `Image/${obj1[dataId]}`);
-    });
-});
+// idol.forEach((element,i) => {
+//     let dataId = element.getAttribute("data-id")
+//     obj1[dataId] = idols[i];
+//     element.addEventListener("click",()=>{
+//         element.classList.toggle("active-idol");
+//         logoIdol.setAttribute("src" , `Image/${obj1[dataId]}`);
+//     });
+// });
 
 backLeft.onclick = function () {
     backLeft.classList.toggle("active-xoay");
@@ -92,7 +92,6 @@ function currentShow(){
     setTimeout(currentShow, 10000);
 }
 currentShow(curentIndex=0);
-
 
 // Fake API
 
@@ -218,14 +217,17 @@ function randomBox(){
     }
    
     const listSpan = document.querySelectorAll(".header span");
+
+    
+    function random(max,min) {
+        return (Math.random()*(max-min)+min);  
+    }
     listSpan.forEach(sp=>{
         setInterval(() => {
-            const rd_top = Math.random();
-            const rd_left = Math.random();
-            const rd_Border = Math.random();
-            sp.style.top = rd_top*99+"%";
-            sp.style.left = rd_left*99+"%";
-            // sp.style.borderRadius = rd_Border*100 +"%";
+            const rd_left = Math.abs(random(header.offsetWidth,-header.offsetWidth));
+            const rd_bottom = Math.abs(random(header.offsetHeight,-header.offsetHeight));
+            sp.style.bottom = rd_bottom+"px";
+            sp.style.left = rd_left+"px";
         }, 3000);
     });
 }
