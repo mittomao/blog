@@ -226,8 +226,12 @@ function randomBox(){
         setInterval(() => {
             const rd_left = Math.abs(random(header.offsetWidth,-header.offsetWidth));
             const rd_bottom = Math.abs(random(header.offsetHeight,-header.offsetHeight));
+            const rd_wh = Math.abs(random(100,-100));
             sp.style.bottom = rd_bottom+"px";
             sp.style.left = rd_left+"px";
+            sp.style.width = rd_wh + "px";
+            sp.style.height = rd_wh + "px";
+            
         }, 3000);
     });
 }

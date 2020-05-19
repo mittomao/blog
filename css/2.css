@@ -22,7 +22,7 @@ h2.right__entertaiment-title{
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background: url(./Music/Background/1.jpg) no-repeat;
+    background: url(./../Music/Background/1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -94,6 +94,7 @@ h4.title-music{
     font-size: 35px;
     transition: all .4s ease;
     color: #ffffff;
+    box-shadow: 0 0 15px #ffffff;
 }
 .button-gr span:hover i.fa{
     transform: scale(1.5);
