@@ -94,7 +94,7 @@ h4.title-music{
     font-size: 35px;
     transition: all .4s ease;
     color: #ffffff;
-    box-shadow: 0 0 15px #ffffff;
+    /* box-shadow: 0 0 15px #ffffff; */
 }
 .button-gr span:hover i.fa{
     transform: scale(1.5);
@@ -311,6 +311,7 @@ span.hihi{
     font-size:1.6em;
     color: #fff;
     animation: rung 1s ease infinite;
+    cursor: pointer;
 }
 
 .lyrics{

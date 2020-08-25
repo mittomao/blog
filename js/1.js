@@ -109,8 +109,8 @@ function showData(){
     let listTin = document.getElementById("list-tin");
     let str = "";
         for (const value of arguments) {//col-md-6 col-12 col-lg-6
-            str+=`<div class="col-md-8 col-12 offset-md-2 ">
-                <div class="card">
+            str+=`<div class="col-md-8 col-12 offset-md-2 col-card">
+                <div class="card card--tin">
                     <a href="${value.link}" class="card-title"><i class="fa fa-share mr-2"></i>${value.title}</a>
                     <h5 class="card-subject">${value.catagory} - <span>${value.subject}</span></h5>
                     <p class="card-link">${value.link}</p>
@@ -166,7 +166,7 @@ const currorMain = document.querySelector("#curror");
 function createCurror(e){
     currorMain.style.top = e.pageY + 'px';
     currorMain.style.left = e.pageX + 'px';
-    currorMain.style.transition = 0.01 + "s" + "ease";
+    currorMain.style.transition = 0.01 + "s";
 }
 window.addEventListener("mousemove" , createCurror);
 
@@ -235,7 +235,7 @@ function randomBox(){
         }, 3000);
     });
 }
-randomBox();
+// randomBox();
 
 const searchTitle = document.querySelector("#search-title");
 

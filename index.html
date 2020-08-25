@@ -13,6 +13,7 @@
     crossorigin="anonymous"></script>
     <script src="./assets/javascripts/tweenmax/gsap.min.js"></script>
     <script src="./assets/javascripts/tweenmax/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="css/1.css">
@@ -36,307 +37,322 @@
     </style>
 </head>
   <body>
-    <div id="curror"></div>
-    <div class="timeline">
-        <div class="timeline-progress"></div>
-    </div>
-    <div class="header">
-        
-        <div class="header-item active-s">
-            <h3 class="slogan slogan-md slogan-xs">Cuộc Sống Luôn Cho Ta Một Cơ Hội Nếu Như Biết Cố Gắng ! Ngày Mai Sẽ Là Một Ngày Tuyệt Vời !</h3>
-            <h5>Anonymous</h5>
+    <div class="wrapper">
+        <div class="hello">
+            <h1>HELLO You !</h1>
         </div>
-        <div class="header-item">
-            <h3 class="slogan slogan-md slogan-xs">Con Chim Có Thể Đậu Ở Bất Kỳ Cành Cây Nào Nó Muốn Mà Không Sợ Cành Cây Gẫy. Bởi Vì Niềm Tin Của Nó Vào Đôi Cánh Chứ Không Phải Cái Cây.</h3>
-            <h5>Anonymous</h5>
+        <div class="hellu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="header-item">
-            <h3 class="slogan slogan-md slogan-xs">Muốn Có Những Thứ Chưa Có. Hãy Làm Những Việc Chưa Làm ! </h3>
-            <h5>Anonymous</h5>
+        <div class="hallu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="header-item">
-            <h3 class="loading loading-md loading-xs" >Loading...</h3>
-            <h5>Wainii</h5>
+        <div id="curror"></div>
+        <!-- <div class="timeline">
+            <div class="timeline-progress"></div>
+        </div> -->
+        <div class="header">
+            <div class="header-item active-s">
+                <h3 class="slogan slogan-md slogan-xs">Cuộc Sống Luôn Cho Ta Một Cơ Hội Nếu Như Biết Cố Gắng ! Ngày Mai Sẽ Là Một Ngày Tuyệt Vời !</h3>
+                <h5>Anonymous</h5>
+            </div>
+            <div class="header-item">
+                <h3 class="slogan slogan-md slogan-xs">Con Chim Có Thể Đậu Ở Bất Kỳ Cành Cây Nào Nó Muốn Mà Không Sợ Cành Cây Gẫy. Bởi Vì Niềm Tin Của Nó Vào Đôi Cánh Chứ Không Phải Cái Cây.</h3>
+                <h5>Anonymous</h5>
+            </div>
+            <div class="header-item">
+                <h3 class="slogan slogan-md slogan-xs">Muốn Có Những Thứ Chưa Có. Hãy Làm Những Việc Chưa Làm ! </h3>
+                <h5>Anonymous</h5>
+            </div>
+            <div class="header-item">
+                <h3 class="loading loading-md loading-xs" >Loading...</h3>
+                <h5>Wainii</h5>
+            </div>
+            <div id="back-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+            <div class="right__tab">
+                <a href="#" data-id="tab1" class="tab-item"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span>Tips</span></a>
+                <a href="#" data-id="tab2" class="tab-item"><i class="fa fa-eye"></i><span>Personal</span></a>
+                <a href="#" data-id="tab3" class="tab-item"><i class="fa fa-headphones"></i><span>Entertainment</span></a>
+                <a href="#" data-id="tab3" class="tab-item"><i class="fa fa-gamepad"></i><span>Game</span></a>
+            </div>
         </div>
-        <div id="back-left"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
-    </div>
-    <div class="main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col col-12 col-md-12 col-lg-3 is-show">
-                    <div class="left left-md">
-                        <div class="left__img-box" id="avatar-logo">
-                            <img src="Image/1.png" alt="..." id="logo-idol"> 
-                            <span class="idol" data-id ="i_1">1</span>
-                            <span class="idol" data-id ="i_2">9</span>
-                            <span class="idol" data-id ="i_3">9</span>
-                            <span class="idol" data-id ="i_4">8</span>
-                        </div>
-                        <div class="left__introduce">
-                            <h4 class="title">Introduce</h4>
-                            <section>
-                                <div class="section-left">
-                                    <i class="fa fa-plus"></i>
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-12 col-md-12 col-lg-3 is-show no_gutters">
+                        <div class="left left-md">
+                            <div class="left__img-box" id="avatar-logo">
+                                <img src="Image/1.png" alt="..." id="logo-idol"> 
+                                <span class="idol" data-id ="i_1">1</span>
+                                <span class="idol" data-id ="i_2">9</span>
+                                <span class="idol" data-id ="i_3">9</span>
+                                <span class="idol" data-id ="i_4">8</span>
+                            </div>
+                            <div class="left__introduce">
+                                <h4 class="title">Introduce</h4>
+                                <section>
+                                    <div class="section-left">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                    <div class="section-right">
+                                        <div>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <h5>Mit To Mao</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                                            <h5>Hà Nội</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <h5>0337217711</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <h5>wainii1998@gmail.com</h5>
+                                        </div>
+                                    </div>
+                                    <div class="default"></div>
+                                </section>
+                            </div>
+                            <div class="left__introduce">
+                                <h4 class="title">Skill</h4>
+                                <section>
+                                    <div class="section-left">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                    <div class="section-right">
+                                        <div>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <h5>HTML/CSS</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <h5>JAVASCRIPT</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <h5>REACTJS</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <h5>Jquery</h5>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <h5>PHP</h5>
+                                        </div>
+                                    </div>
+                                    <div class="default"></div>
+    
+                                </section>
+                            </div>
+                            <div class="left__statistical">
+                                <h4 class="title">Statistical</h4>
+                                <div class="box">
+                                    <div class="box-item">
+                                        <h3>15</h3>
+                                        <h5>Bài Viết</h5>
+                                    </div>
+                                    <div class="box-item">
+                                        <h3>100</h3>
+                                        <h5>Đánh Giá</h5>
+                                    </div>
                                 </div>
-                                <div class="section-right">
-                                    <div>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <h5>Mit To Mao</h5>
+                            </div>
+                            <div class="left__about">
+                                <h4 class="title">About</h4>
+                                <div class="avatar">
+                                    <img src="feeling/like.png" alt="No IMG" id = "avatar">
+                                </div>
+                                <div class="icon-feeling">
+                                    <div class="heart" data-type="like">
+                                        <img src="./feeling/icon/like.ico" alt="" class="icon-fb">
                                     </div>
-                                    <div>
-                                        <i class="fa fa-address-book" aria-hidden="true"></i>
-                                        <h5>Hà Nội</h5>
+                                    <div class="heart" data-type="love">
+                                        <img src="./feeling/icon/love.ico" alt="" class="icon-fb">
                                     </div>
+                                    <div class="heart" data-type="angry">
+                                        <img src="./feeling/icon/care.ico" alt="" class="icon-fb">
+                                    </div>    
+                                    <div class="heart" data-type="haha">
+                                        <img src="./feeling/icon/haha emoji.ico" alt="" class="icon-fb">
+                                    </div>
+                                    <div class="heart" data-type="wow">
+                                        <img src="./feeling/icon/wow.ico" alt="" class="icon-fb">
+                                    </div>
+                                    <div class="heart" data-type="sad">
+                                        <img src="./feeling/icon/sad emoji.ico" alt="" class="icon-fb">
+                                    </div>
+                                    <div class="heart" data-type="angry">
+                                        <img src="./feeling/icon/angry face.ico" alt="" class="icon-fb">
+                                    </div> 
+                  
+                                </div> 
+                                <div class="icon">
                                     <div>
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <h5>0337217711</h5>
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        <p class="tooltip-icon">Facebook</p>
                                     </div>
                                     <div>
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <h5>wainii1998@gmail.com</h5>
-                                    </div>
-                                </div>
-                                <div class="default"></div>
-                            </section>
-                        </div>
-                        <div class="left__introduce">
-                            <h4 class="title">Skill</h4>
-                            <section>
-                                <div class="section-left">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="section-right">
-                                    <div>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <h5>HTML/CSS</h5>
+                                        <p class="tooltip-icon">Gamil</p>
                                     </div>
                                     <div>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <h5>JAVASCRIPT</h5>
+                                        <i class="fa fa-google" aria-hidden="true"></i>
+                                        <p class="tooltip-icon">Google</p>
                                     </div>
                                     <div>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <h5>REACTJS</h5>
+                                        <i class="fa fa-github" aria-hidden="true"></i>
+                                        <p class="tooltip-icon">Gibhub</p>
                                     </div>
-                                    <div>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <h5>Jquery</h5>
-                                    </div>
-                                    <div>
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <h5>PHP</h5>
-                                    </div>
-                                </div>
-                                <div class="default"></div>
-
-                            </section>
-                        </div>
-                        <div class="left__statistical">
-                            <h4 class="title">Statistical</h4>
-                            <div class="box">
-                                <div class="box-item">
-                                    <h3>15</h3>
-                                    <h5>Bài Viết</h5>
-                                </div>
-                                <div class="box-item">
-                                    <h3>100</h3>
-                                    <h5>Đánh Giá</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="left__about">
-                            <h4 class="title">About</h4>
-                            <div class="avatar">
-                                <img src="feeling/like.png" alt="No IMG" id = "avatar">
-                            </div>
-                            <div class="icon-feeling">
-                                <div class="heart" data-type="like">
-                                    <img src="./feeling/icon/like.ico" alt="" class="icon-fb">
-                                </div>
-                                <div class="heart" data-type="love">
-                                    <img src="./feeling/icon/love.ico" alt="" class="icon-fb">
-                                </div>
-                                <div class="heart" data-type="angry">
-                                    <img src="./feeling/icon/care.ico" alt="" class="icon-fb">
-                                </div>    
-                                <div class="heart" data-type="haha">
-                                    <img src="./feeling/icon/haha emoji.ico" alt="" class="icon-fb">
-                                </div>
-                                <div class="heart" data-type="wow">
-                                    <img src="./feeling/icon/wow.ico" alt="" class="icon-fb">
-                                </div>
-                                <div class="heart" data-type="sad">
-                                    <img src="./feeling/icon/sad emoji.ico" alt="" class="icon-fb">
-                                </div>
-                                <div class="heart" data-type="angry">
-                                    <img src="./feeling/icon/angry face.ico" alt="" class="icon-fb">
-                                </div> 
-              
-                            </div> 
-                            <div class="icon">
-                                <div>
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                    <p class="tooltip-icon">Facebook</p>
-                                </div>
-                                <div>
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p class="tooltip-icon">Gamil</p>
-                                </div>
-                                <div>
-                                    <i class="fa fa-google" aria-hidden="true"></i>
-                                    <p class="tooltip-icon">Google</p>
-                                </div>
-                                <div>
-                                    <i class="fa fa-github" aria-hidden="true"></i>
-                                    <p class="tooltip-icon">Gibhub</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                 <!-- End Left -->
-                 <div class="col">
-                    <div class="right">
-                        <div class="right__tab">
-                            <a href="#" data-id="tab1" class="tab-item"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span>Tips</span></a>
-                            <a href="#" data-id="tab2" class="tab-item"><i class="fa fa-eye"></i><span>Personal</span></a>
-                            <a href="#" data-id="tab3" class="tab-item"><i class="fa fa-headphones"></i><span>Entertainment</span></a>
-                        </div>
-                        <div class="right__content" id = "right__content">
-                            <div class="content content-tips active-tab" id ="tab1">
-                                <div class="container-fluid">
-                                    <h2 class="top-post">Top Posts</h2>
-                                    <form action="" method="post" class="form-top">
-                                        <div class="form-group">
-                                          <input type="text"
-                                            class="form-control" name="" id="search-title" aria-describedby="helpId" placeholder="...Quick Search">
+                     <!-- End Left -->
+                     <div class="col no_gutters">
+                        <div class="right">
+                            <div class="right__content" id = "right__content">
+                                <div class="content content-tips active-tab" id ="tab1">
+                                    <div class="container-fluid">
+                                        <h2 class="top-post">Top Posts</h2>
+                                        <form action="" method="post" class="form-top">
+                                            <div class="form-group">
+                                              <input type="text"
+                                                class="form-control" name="" id="search-title" aria-describedby="helpId" placeholder="...Quick Search">
+                                            </div>
+                                        </form>
+                                        <div class="row" id = "list-tin">
+                                            <!-- Lay Du Lieu Tu Server -->
                                         </div>
-                                    </form>
-                                    <div class="row" id = "list-tin">
-                                        <!-- Lay Du Lieu Tu Server -->
-                                    </div>
-                                    <ul class="right_pagination">
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Tab2 -->
-                            <div class="content content-gradient" id ="tab2">
-                                <h2 class="top-post">Top Linear-Gradient</h2>
-                                
-                                <div class="container">
-                                    <div class="question text-right my-3">
-                                        <a href="#" class="btn btn-outline-primary" id="question">Tại Sao Bạn Không Thử ? <span>Try</span></a>
-                                    </div>
-                                    <div class="try-gradient">
-                                        <div>
-                                            <div class="try-gradient__function">
-                                                
-                                                    <div class="form-group">
-                                                        <label for="">Color 1</label>
-                                                        <input type="color"
-                                                            class="form-control" name="" id="color1">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <label for="">Color 2</label>
-                                                            <input type="color"
-                                                            class="form-control" name="" id="color2">
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <label for="">Hệ Số Góc</label>
-                                                            <input type="text"
-                                                            class="form-control" name="" id="hesogoc">
-                                                    </div>
-                                                    
-                                                    <div class="form-group">
-                                                      <label for="">Chose Position</label>
-                                                      <select class="form-control" name="" id="position">
-                                                        <option value="top" selected>TOP</option>
-                                                        <option value="left">LEFT</option>
-                                                        <option value="bottom">BOTTOM</option>
-                                                        <option value="right">RIGHT</option> 
-                                                      </select>
-                                                    </div>
-                                                    <button type="reset" class="btn btn-primary btn-block" id="button-try">Try</button>
-                                                
-                                            </div>
-                                            <div class="try-gradient__display">
-                                                <div class="box-try" id="box-try">
-                                                    
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="">RESULT</label>
-                                                    <input type="text"
-                                                      class="form-control" name="" id="result-color">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="close-try">
-                                            <i class="fa fa-window-close" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <h3 class="title-gradient">Mẫu Hót</h3>
-                                    <div class="row" id="listColor">
-                                        <!-- Lay Du Lieu Tu Server -->
-                                    </div>
-                                    <!-- <div class="popup-color">
-                                        <p></p>
-                                        <span class="close-popop">
-                                            <i class="fa fa-expand" aria-hidden="true"></i>
-                                        </span>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <!-- Tab3 -->
-                            <div class="content right__entertaiment" id ="tab3">
-                                <div class="lyrics"></div>
-                                <div class="brid"></div>
-                                <div class="top-left">
-                                    <div class="rec">
-                                        <p>REC</p>
+                                        <ul class="right_pagination">
+                                            
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="bottom-left">
-                                    <i class="fa fa-camera" aria-hidden="true"></i>
-                                </div>
-                                <div class="bottom-right">
-                                    <i class="fa fa-battery-quarter" aria-hidden="true"></i>
-                                </div>
-                                <!-- <div class="top-right"></div> -->
-                                <h2 class="right__entertaiment-title md-top">Media Music</h2>
-                                <div class="main-bg"></div>
-                                <div class="main-content main-content-md">
-                                    <audio id = "player" src="" type="audio/mp3">
-                                        <!-- <source src="Tat_Ca_Se_Thay_Em.mp3" type="audio/mp3"> -->
-                                    </audio>
-                                    <div class="audio-player">
-                                        <div class="controls">
-                                            <h4 class="title-music"></h4>
-                                            <div class="progressbar">
-                                                <div class="progress-time"></div>
-                                            </div>
-                                            <div class="time">
-                                                <span id="curtime">00:00</span>
-                                                <span>/</span>
-                                                <span id="durtime">00:00</span>
-                                            </div>
-                                            <div class="button-gr">
-                                                <span><i id="prevButton" class="fa fa-backward" aria-hidden="true"></i></span>
-                                                <span><i id="playerButton" class="fa fa-play-circle" aria-hidden="true"></i></span>
-                                                <span><i id ="loop" class="fa fa-undo" aria-hidden="true"></i></span>
-                                                <span><i id="volum" class="fa fa-volume-up" aria-hidden="true"></i></span>
-                                                <span class="progressVolum">
-                                                    <div class="progressV"></div>
-                                                </span>
-                                                <span><i id="nextButton" class="fa fa-forward" aria-hidden="true"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="albums albums-md">
-                                    <ul id ="list-album">
+                                <!-- Tab2 -->
+                                <div class="content content-gradient" id ="tab2">
+                                    <h2 class="top-post">Top Linear-Gradient</h2>
                                     
-                                    </ul>
+                                    <div class="container">
+                                        <div class="question text-right my-3">
+                                            <a href="#" class="btn btn-outline-primary" id="question">Tại Sao Bạn Không Thử ? <span>Try</span></a>
+                                        </div>
+                                        <div class="try-gradient">
+                                            <div>
+                                                <div class="try-gradient__function">
+                                                    
+                                                        <div class="form-group">
+                                                            <label for="">Color 1</label>
+                                                            <input type="color"
+                                                                class="form-control" name="" id="color1">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="">Color 2</label>
+                                                                <input type="color"
+                                                                class="form-control" name="" id="color2">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="">Hệ Số Góc</label>
+                                                                <input type="text"
+                                                                class="form-control" name="" id="hesogoc">
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                          <label for="">Chose Position</label>
+                                                          <select class="form-control" name="" id="position">
+                                                            <option value="top" selected>TOP</option>
+                                                            <option value="left">LEFT</option>
+                                                            <option value="bottom">BOTTOM</option>
+                                                            <option value="right">RIGHT</option> 
+                                                          </select>
+                                                        </div>
+                                                        <button type="reset" class="btn btn-primary btn-block" id="button-try">Try</button>
+                                                    
+                                                </div>
+                                                <div class="try-gradient__display">
+                                                    <div class="box-try" id="box-try">
+                                                        
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">RESULT</label>
+                                                        <input type="text"
+                                                          class="form-control" name="" id="result-color">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="close-try">
+                                                <i class="fa fa-window-close" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <h3 class="title-gradient">Mẫu Hót</h3>
+                                        <div class="row" id="listColor">
+                                            <!-- Lay Du Lieu Tu Server -->
+                                        </div>
+                                        <!-- <div class="popup-color">
+                                            <p></p>
+                                            <span class="close-popop">
+                                                <i class="fa fa-expand" aria-hidden="true"></i>
+                                            </span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- Tab3 -->
+                                <div class="content right__entertaiment" id ="tab3">
+                                    <div class="lyrics"></div>
+                                    <div class="brid"></div>
+                                    <div class="top-left">
+                                        <div class="rec">
+                                            <p>REC</p>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-left">
+                                        <i class="fa fa-camera" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="bottom-right">
+                                        <i class="fa fa-expand" id="full-screen" aria-hidden="true"></i>
+                                    </div>
+                                    <!-- <div class="top-right"></div> -->
+                                    <h2 class="right__entertaiment-title md-top">Media Music</h2>
+                                    <div class="main-bg"></div>
+                                    <div class="main-content main-content-md">
+                                        <audio id = "player" src="" type="audio/mp3">
+                                            <!-- <source src="Tat_Ca_Se_Thay_Em.mp3" type="audio/mp3"> -->
+                                        </audio>
+                                        <div class="audio-player">
+                                            <div class="controls">
+                                                <h4 class="title-music"></h4>
+                                                <div class="progressbar">
+                                                    <div class="progress-time"></div>
+                                                </div>
+                                                <div class="time">
+                                                    <span id="curtime">00:00</span>
+                                                    <span>/</span>
+                                                    <span id="durtime">00:00</span>
+                                                </div>
+                                                <div class="button-gr">
+                                                    <span><i id="prevButton" class="fa fa-backward" aria-hidden="true"></i></span>
+                                                    <span><i id="playerButton" class="fa fa-play-circle" aria-hidden="true"></i></span>
+                                                    <span><i id ="loop" class="fa fa-undo" aria-hidden="true"></i></span>
+                                                    <span><i id="volum" class="fa fa-volume-up" aria-hidden="true"></i></span>
+                                                    <span class="progressVolum">
+                                                        <div class="progressV"></div>
+                                                    </span>
+                                                    <span><i id="nextButton" class="fa fa-forward" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="albums albums-md">
+                                        <ul id ="list-album">
+                                        
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -344,25 +360,25 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <h4>Thank For Watching</h4>
-        <div class="w-50 mx-auto">
-            <div class="form-group">
-              <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Góp ý ....">  
+        <div class="footer">
+            <h4>Thank For Watching</h4>
+            <div class="w-50 mx-auto">
+                <div class="form-group">
+                  <input type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="Góp ý ....">  
+                </div>
+                <button class="btn btn-success">Submit</button>
             </div>
-            <button class="btn btn-success">Submit</button>
+            <h5>&copy; <b>Copyright - Mit To Mao</b></h5>
         </div>
-        <h5>&copy; <b>Copyright - Mit To Mao</b></h5>
-    </div>
-    <div class="change-action" id="switch">
-        <i class="fa fa-plus abc" aria-hidden="true"></i>
-        <!-- <div class="list-action">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-youtube"></i>
-            <i class="fa fa-github"></i>
-        </div> -->
+        <div class="change-action" id="switch">
+            <i class="fa fa-plus abc" aria-hidden="true"></i>
+            <!-- <div class="list-action">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-github"></i>
+            </div> -->
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -371,6 +387,7 @@
     <script src="js/1.js"></script>
     <script src="js/2.js"></script>
     <script src="js/3.js"></script>
+    <script src="js/4.js"></script>
     <script>
         $(function () {
             
@@ -379,10 +396,10 @@
                 return (Math.random()*(max-min)) + min;
             }
             setInterval(() => {
-                const text = $(".active-s");
-            const split = new SplitText(text);
+                const text = $(".active-s .slogan");
+                const split = new SplitText(text);
                 $(split.chars).each(function () { 
-                TweenMax.from($(this),3.5,{ 
+                TweenMax.from($(this),1.5,{ 
                     opacity: 0.3,
                     x: random(500,-500),
                     y: random(500,-500),
